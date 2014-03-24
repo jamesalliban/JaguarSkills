@@ -1,0 +1,4 @@
+JaguarSkills
+============
+
+Kinect puppet application
