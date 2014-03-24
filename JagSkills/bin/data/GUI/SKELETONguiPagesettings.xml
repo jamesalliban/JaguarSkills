@@ -1,0 +1,25 @@
+<Widget>
+    <Kind>4</Kind>
+    <Name>JOINT OFFSET X</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>JOINT OFFSET Y</Name>
+    <Value>-59.589046478</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>JOINT OFFSET Z</Name>
+    <Value>119.178092957</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ROT X DEGREES</Name>
+    <Value>27.054792404</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>Z REDUCTION SCALE</Name>
+    <Value>0.012222603</Value>
+</Widget>
