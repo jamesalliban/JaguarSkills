@@ -1,0 +1,45 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+
+#windows
+
+*.sdf
+*.dll
+*.suo
+*.opensdf
+*.exe
+*.exp
+*.lib
+BiPolar_V2/ipch
+BiPolar_V2/obj
+
+.DS_Store
+#.app
+
+
+#osx
+
+*.sdf
+*.dll
+*.suo
+*.opensdf
+*.exe
+*.exp
+*.lib
+BiPolar_V2/ipch
+BiPolar_V2/obj
+
+.DS_Store
+.app
