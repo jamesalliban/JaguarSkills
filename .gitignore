@@ -22,8 +22,8 @@
 *.exe
 *.exp
 *.lib
-BiPolar_V2/ipch
-BiPolar_V2/obj
+JagSkills/ipch
+JagSkills/obj
 
 .DS_Store
 #.app
@@ -38,8 +38,8 @@ BiPolar_V2/obj
 *.exe
 *.exp
 *.lib
-BiPolar_V2/ipch
-BiPolar_V2/obj
+JagSkills/ipch
+JagSkills/obj
 
 .DS_Store
 .app

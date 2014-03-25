@@ -8,7 +8,7 @@
 
 #include "Torso.h"
 
-void Torso::setup(string modelPath)  //, int connections, int _bodyType)
+void Torso::setup(string modelPath)
 {
     BodyPart::setup(modelPath);
     

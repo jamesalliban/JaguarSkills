@@ -31,9 +31,9 @@ void KinectManager::update()
 
 void KinectManager::draw()
 {
-    
+	//ofSetColor(255);
+    //kinectRecorder.draw(0,0);
 }
-
 
 void KinectManager::formatSkeletonData()
 {

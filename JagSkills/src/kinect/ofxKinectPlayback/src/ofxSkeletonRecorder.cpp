@@ -35,7 +35,7 @@ void ofxSkeletonRecorder::draw(int x, int y)
 //	{
 		recordingImg.setFromPixels(recordingPixels);
 		
-        ofDisableDepthTest();
+        glDisable(GL_DEPTH_TEST);
         
         ofPushStyle();
         ofPushMatrix();
@@ -48,7 +48,8 @@ void ofxSkeletonRecorder::draw(int x, int y)
         ofPopMatrix();
         ofPopStyle();
         
-        ofEnableDepthTest();
+        
+        glEnable(GL_DEPTH_TEST);
 //	}
 }
 

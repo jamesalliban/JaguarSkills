@@ -83,8 +83,8 @@ void Scene::update(SkeletonDataObject skeleton)
 
 void Scene::draw(SkeletonDataObject skeleton)
 {
-    ofEnableDepthTest();
-    
+    glEnable(GL_DEPTH_TEST);
+
     easyCam.begin(viewport);
     
     ofSetColor(255, 100);
@@ -96,7 +96,7 @@ void Scene::draw(SkeletonDataObject skeleton)
     ofEnableLighting();
     light.enable();
     
-    
+    printf("hello \n");
     
     
     ofSetColor(255, modelAlpha);
@@ -184,7 +184,7 @@ void Scene::draw(SkeletonDataObject skeleton)
     
     easyCam.end();
     
-    ofDisableDepthTest();
+	glDisable(GL_DEPTH_TEST);
 }
 
 
@@ -215,7 +215,11 @@ void Scene::drawLineSkeleton(SkeletonDataObject skeleton)
     {
         ofVec3f skelPoint = skeleton.skeletonPositions[i];
         ofSetColor(255, 0, 0);
+#ifdef TARGET_OSX
         ofDrawSphere(skelPoint.x, skelPoint.y, skelPoint.z, 1);
+#else
+		ofSphere(skelPoint.x, skelPoint.y, skelPoint.z, 1);
+#endif
     }
 }
 

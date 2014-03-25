@@ -126,8 +126,12 @@ void GUI::addModelGlobalGUI()
 	drawModes.push_back("FACE");
 	drawModes.push_back("WIREFRAME");
     gui->addLabel("DRAW MODES", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
 	gui->addRadio("DRAW MODES", drawModes, OFX_UI_ORIENTATION_VERTICAL);
-    gui->addSpacer(length, 1);
+#else
+	gui->addRadio("DRAW MODES", drawModes, OFX_UI_ORIENTATION_VERTICAL, dim, dim);
+#endif
+	gui->addSpacer(length, 1);
     
     // debug
     gui->addToggle("DRAW DEBUG", &app->scene.isDrawDebug, toggleSize, toggleSize);
@@ -150,9 +154,16 @@ void GUI::addModelTorsoGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("TORSO", OFX_UI_FONT_MEDIUM);
+	
+#ifdef TARGET_OSX
     gui->addSlider("TORSO WIDTH SCALE", 0.01, 0.5, &app->scene.torso.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("TORSO HEIGHT SCALE", 0.01, 0.5, &app->scene.torso.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("TORSO DEPTH SCALE", 0.01, 0.5, &app->scene.torso.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("TORSO WIDTH SCALE", 0.01, 0.5, &app->scene.torso.scaleW, length, dim);
+    gui->addSlider("TORSO HEIGHT SCALE", 0.01, 0.5, &app->scene.torso.scaleH, length, dim);
+    gui->addSlider("TORSO DEPTH SCALE", 0.01, 0.5, &app->scene.torso.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("TORSO ROT X", -180, 180, &app->scene.torso.rotX, length, dim);
     gui->addSlider("TORSO ROT Y", -180, 180, &app->scene.torso.rotY, length, dim);
@@ -188,9 +199,15 @@ void GUI::addModelHeadGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("HEAD", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
     gui->addSlider("HEAD WIDTH SCALE", 0.01, 0.5, &app->scene.head.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("HEAD HEIGHT SCALE", 0.01, 0.5, &app->scene.head.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("HEAD DEPTH SCALE", 0.01, 0.5, &app->scene.head.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("HEAD WIDTH SCALE", 0.01, 0.5, &app->scene.head.scaleW, length, dim);
+    gui->addSlider("HEAD HEIGHT SCALE", 0.01, 0.5, &app->scene.head.scaleH, length, dim);
+    gui->addSlider("HEAD DEPTH SCALE", 0.01, 0.5, &app->scene.head.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("HEAD ROT X", -180, 180, &app->scene.head.rotX, length, dim);
     gui->addSlider("HEAD ROT Y", -180, 180, &app->scene.head.rotY, length, dim);
@@ -207,9 +224,15 @@ void GUI::addModelAbdomenAndLegsGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("ABDOMEN", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
     gui->addSlider("ABDOMEN WIDTH SCALE", 0.01, 0.5, &app->scene.abdomen.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("ABDOMEN HEIGHT SCALE", 0.01, 0.5, &app->scene.abdomen.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("ABDOMEN DEPTH SCALE", 0.01, 0.5, &app->scene.abdomen.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("ABDOMEN WIDTH SCALE", 0.01, 0.5, &app->scene.abdomen.scaleW, length, dim);
+    gui->addSlider("ABDOMEN HEIGHT SCALE", 0.01, 0.5, &app->scene.abdomen.scaleH, length, dim);
+    gui->addSlider("ABDOMEN DEPTH SCALE", 0.01, 0.5, &app->scene.abdomen.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("ABDOMEN ROT X", -180, 180, &app->scene.abdomen.rotX, length, dim);
     gui->addSlider("ABDOMEN ROT Y", -180, 180, &app->scene.abdomen.rotY, length, dim);
@@ -223,9 +246,15 @@ void GUI::addModelAbdomenAndLegsGUI()
     
     
     gui->addLabel("LEGS", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
     gui->addSlider("LEGS WIDTH SCALE", 0.01, 0.5, &app->scene.legs.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("LEGS HEIGHT SCALE", 0.01, 0.5, &app->scene.legs.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("LEGS DEPTH SCALE", 0.01, 0.5, &app->scene.legs.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("LEGS WIDTH SCALE", 0.01, 0.5, &app->scene.legs.scaleW, length, dim);
+    gui->addSlider("LEGS HEIGHT SCALE", 0.01, 0.5, &app->scene.legs.scaleH, length, dim);
+    gui->addSlider("LEGS DEPTH SCALE", 0.01, 0.5, &app->scene.legs.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("LEGS ROT X", -180, 180, &app->scene.legs.rotX, length, dim);
     gui->addSlider("LEGS ROT Y", -180, 180, &app->scene.legs.rotY, length, dim);
@@ -249,9 +278,15 @@ void GUI::addModelArmsLGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("UPPER ARM", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
     gui->addSlider("UPPER ARM WIDTH SCALE", 0.01, 0.5, &app->scene.upperArmL.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("UPPER ARM HEIGHT SCALE", 0.01, 0.5, &app->scene.upperArmL.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("UPPER ARM DEPTH SCALE", 0.01, 0.5, &app->scene.upperArmL.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("UPPER ARM WIDTH SCALE", 0.01, 0.5, &app->scene.upperArmL.scaleW, length, dim);
+    gui->addSlider("UPPER ARM HEIGHT SCALE", 0.01, 0.5, &app->scene.upperArmL.scaleH, length, dim);
+    gui->addSlider("UPPER ARM DEPTH SCALE", 0.01, 0.5, &app->scene.upperArmL.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("UPPER ARM ROT X", -180, 180, &app->scene.upperArmL.rotX, length, dim);
     gui->addSlider("UPPER ARM ROT Y", -180, 180, &app->scene.upperArmL.rotY, length, dim);
@@ -265,9 +300,15 @@ void GUI::addModelArmsLGUI()
     gui->addSpacer(length, 1);
     
     gui->addLabel("FOREARM", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
     gui->addSlider("FOREARM WIDTH SCALE", 0.01, 0.5, &app->scene.forearmL.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("FOREARM HEIGHT SCALE", 0.01, 0.5, &app->scene.forearmL.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("FOREARM DEPTH SCALE", 0.01, 0.5, &app->scene.forearmL.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("FOREARM WIDTH SCALE", 0.01, 0.5, &app->scene.forearmL.scaleW, length, dim);
+    gui->addSlider("FOREARM HEIGHT SCALE", 0.01, 0.5, &app->scene.forearmL.scaleH, length, dim);
+    gui->addSlider("FOREARM DEPTH SCALE", 0.01, 0.5, &app->scene.forearmL.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("FOREARM ROT X", -180, 180, &app->scene.forearmL.rotX, length, dim);
     gui->addSlider("FOREARM ROT Y", -180, 180, &app->scene.forearmL.rotY, length, dim);
@@ -289,9 +330,15 @@ void GUI::addModelArmsRGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("UPPER ARM", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
     gui->addSlider("UPPER ARM WIDTH SCALE", 0.01, 0.5, &app->scene.upperArmR.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("UPPER ARM HEIGHT SCALE", 0.01, 0.5, &app->scene.upperArmR.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("UPPER ARM DEPTH SCALE", 0.01, 0.5, &app->scene.upperArmR.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("UPPER ARM WIDTH SCALE", 0.01, 0.5, &app->scene.upperArmR.scaleW, length, dim);
+    gui->addSlider("UPPER ARM HEIGHT SCALE", 0.01, 0.5, &app->scene.upperArmR.scaleH, length, dim);
+    gui->addSlider("UPPER ARM DEPTH SCALE", 0.01, 0.5, &app->scene.upperArmR.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("UPPER ARM ROT X", -180, 180, &app->scene.upperArmR.rotX, length, dim);
     gui->addSlider("UPPER ARM ROT Y", -180, 180, &app->scene.upperArmR.rotY, length, dim);
@@ -305,9 +352,15 @@ void GUI::addModelArmsRGUI()
     gui->addSpacer(length, 1);
     
     gui->addLabel("FOREARM", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
     gui->addSlider("FOREARM WIDTH SCALE", 0.01, 0.5, &app->scene.forearmR.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("FOREARM HEIGHT SCALE", 0.01, 0.5, &app->scene.forearmR.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("FOREARM DEPTH SCALE", 0.01, 0.5, &app->scene.forearmR.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("FOREARM WIDTH SCALE", 0.01, 0.5, &app->scene.forearmR.scaleW, length, dim);
+    gui->addSlider("FOREARM HEIGHT SCALE", 0.01, 0.5, &app->scene.forearmR.scaleH, length, dim);
+    gui->addSlider("FOREARM DEPTH SCALE", 0.01, 0.5, &app->scene.forearmR.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("FOREARM ROT X", -180, 180, &app->scene.forearmR.rotX, length, dim);
     gui->addSlider("FOREARM ROT Y", -180, 180, &app->scene.forearmR.rotY, length, dim);
@@ -330,18 +383,30 @@ void GUI::addModelHandsGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("HAND LEFT", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
     gui->addSlider("HAND LEFT WIDTH SCALE", 0.01, 0.5, &app->scene.handL.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("HANDS LEFT HEIGHT SCALE", 0.01, 0.5, &app->scene.handL.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("HANDS LEFT DEPTH SCALE", 0.01, 0.5, &app->scene.handL.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("HAND LEFT WIDTH SCALE", 0.01, 0.5, &app->scene.handL.scaleW, length, dim);
+    gui->addSlider("HANDS LEFT HEIGHT SCALE", 0.01, 0.5, &app->scene.handL.scaleH, length, dim);
+    gui->addSlider("HANDS LEFT DEPTH SCALE", 0.01, 0.5, &app->scene.handL.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("HANDS LEFT ROT X", -180, 180, &app->scene.handL.rotX, length, dim);
     gui->addSlider("HANDS LEFT ROT Y", -180, 180, &app->scene.handL.rotY, length, dim);
     gui->addSlider("HANDS LEFT ROT Z", -180, 180, &app->scene.handL.rotZ, length, dim);
     
     gui->addLabel("HAND RIGHT", OFX_UI_FONT_MEDIUM);
+#ifdef TARGET_OSX
     gui->addSlider("HAND RIGHT WIDTH SCALE", 0.01, 0.5, &app->scene.handR.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("HANDS RIGHT HEIGHT SCALE", 0.01, 0.5, &app->scene.handR.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("HANDS RIGHT DEPTH SCALE", 0.01, 0.5, &app->scene.handR.scaleD, length, dim)->setLabelPrecision(4);
+#else
+    gui->addSlider("HAND RIGHT WIDTH SCALE", 0.01, 0.5, &app->scene.handR.scaleW, length, dim);
+    gui->addSlider("HANDS RIGHT HEIGHT SCALE", 0.01, 0.5, &app->scene.handR.scaleH, length, dim);
+    gui->addSlider("HANDS RIGHT DEPTH SCALE", 0.01, 0.5, &app->scene.handR.scaleD, length, dim);
+#endif
     gui->addSpacer(length, 1);
     gui->addSlider("HANDS RIGHT ROT X", -180, 180, &app->scene.handR.rotX, length, dim);
     gui->addSlider("HANDS RIGHT ROT Y", -180, 180, &app->scene.handR.rotY, length, dim);

@@ -24,7 +24,8 @@ void testApp::setup()
     
     gui.setup();
     
-    }
+	isPaused = false;
+}
 
 void testApp::update()
 {

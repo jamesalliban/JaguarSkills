@@ -124,7 +124,12 @@ void BodyPart::drawDebug(ofColor col)
     {
         ofPushStyle();
         ofSetColor(col);
+
+#ifdef TARGET_OSX
         ofDrawBox(connectingPoints[i], 7);
+#else
+		ofBox(connectingPoints[i], 7);
+#endif
         ofPopStyle();
     }
     
@@ -142,7 +147,12 @@ void BodyPart::drawDebug(ofColor col)
         // draw Sphere at connection point
         ofPushStyle();
         ofSetColor(0, 0, 255, 255);
+		
+#ifdef TARGET_OSX
         ofDrawSphere(connectingPointsAbsolute[i], 5);
+#else
+        ofSphere(connectingPointsAbsolute[i], 5);
+#endif
         ofPopStyle();
     }
 }
@@ -154,10 +164,15 @@ void BodyPart::formatConnections()
 
     ofPushStyle();
     ofSetColor(0, 0, 255, 255);
+
+#ifdef TARGET_OSX
     ofDrawSphere(connectingPointsAbsolute[0], 5);
-    ofPopStyle();
-    
-    
+#else
+    ofSphere(connectingPointsAbsolute[0], 5);
+#endif
+
+	
+	ofPopStyle();
 }
 
 

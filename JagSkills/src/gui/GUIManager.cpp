@@ -63,16 +63,26 @@ void GUIManager::buildSideBarGUI()
 	sideBarGui->setName(SIDE_TITLE);
 //    sideBarGui->setFont(guiPath + "/NewMedia Fett.ttf");
     
-//    sideBarGui->set
-    
 	sideBarGui->addWidgetRight(new ofxUIFPS(OFX_UI_FONT_MEDIUM));
     
+#ifdef TARGET_OSX
     sideBarGui->setGlobalButtonDimension(45);
-    
+#endif
+
+#ifdef TARGET_OSX
     sideBarGui->addImageToggle(SIDE_AUTO_SAVE, "GUI/images/auto_save_image.png", true);
-    sideBarGui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
+#else
+	sideBarGui->addWidgetDown(new ofxUILabelToggle(true, SIDE_AUTO_SAVE));
+#endif
+
+	sideBarGui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
     
+#ifdef TARGET_OSX
     sideBarGui->addImageButton(SIDE_SAVE, "GUI/images/save_image.png", false);
+#else
+	sideBarGui->addWidgetDown(new ofxUILabelButton(false, SIDE_SAVE));
+#endif
+
     sideBarGui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
     
     sideBarGui->autoSizeToFitWidgets();
@@ -108,8 +118,13 @@ void GUIManager::finaliseCanvas(ofxUICanvas* gui, bool isSidebar)
     
     if (!isSidebar)
     {
+#ifdef TARGET_OSX
         sideBarGui->addWidgetDown(new ofxUILabelToggle(name, false));
-        sideBarGui->autoSizeToFitWidgets();
+#else
+        sideBarGui->addWidgetDown(new ofxUILabelToggle(false, name));
+#endif
+		sideBarGui->autoSizeToFitWidgets();
+
     }
 }
 

@@ -31,8 +31,6 @@ public:
     
     bool isPaused;
     
-    bool isXRot, isYRot, isZRot;
-    
     float frameRate;
     bool isFullscreen;
 

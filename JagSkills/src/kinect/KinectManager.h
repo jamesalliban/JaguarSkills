@@ -9,6 +9,9 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxKinectNui.h"
+#include "ofxKinectNuiPlayer.h"
+
 #include "ofxSkeletonRecorder.h"
 
 class KinectManager
