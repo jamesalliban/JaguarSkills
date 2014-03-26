@@ -1,0 +1,140 @@
+<Widget>
+    <Kind>4</Kind>
+    <Name>BACK RED</Name>
+    <Value>66.369857788</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>BACK GREEN</Name>
+    <Value>74.229446411</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>BACK BLUE</Name>
+    <Value>94.315063477</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>BACK ALPHA</Name>
+    <Value>145.839050293</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>FILL RED</Name>
+    <Value>220.068496704</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>FILL GREEN</Name>
+    <Value>220.068496704</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>FILL BLUE</Name>
+    <Value>220.941772461</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>FILL ALPHA</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>HIGHLIGHT RED</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>HIGHLIGHT GREEN</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>HIGHLIGHT BLUE</Name>
+    <Value>28.818492889</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>HIGHLIGHT ALPHA</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>OUTLINE RED</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>OUTLINE GREEN</Name>
+    <Value>232.294509888</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>OUTLINE BLUE</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>OUTLINE ALPHA</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>OUTLINE HIGHLIGHT RED</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>OUTLINE HIGHLIGHT GREEN</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>OUTLINE HIGHLIGHT BLUE</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>OUTLINE HIGHLIGHT ALPHA</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>PADDED RED</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>PADDED GREEN</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>PADDED BLUE</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>PADDED ALPHA</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>PADDED HIGHLIGHT RED</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>PADDED HIGHLIGHT GREEN</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>PADDED HIGHLIGHT BLUE</Name>
+    <Value>113.527397156</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>PADDED HIGHLIGHT ALPHA</Name>
+    <Value>255.000000000</Value>
+</Widget>

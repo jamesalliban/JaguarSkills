@@ -1,0 +1,48 @@
+﻿Build started 26/03/2014 14:49:34.
+     1>Project "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\_JagSkillsPuppet\JagSkillsPuppet.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "obj\Release\JagSkillsPuppet.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I..\..\..\libs\poco\include /I..\..\..\addons /I"C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc" /I..\..\..\addons\ofxKinectNui\src /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Release\\" /Fd"obj\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\main.cpp src\testApp.cpp
+         main.cpp
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(46): error C2146: syntax error : missing ';' before identifier 'INuiAudioBeam'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(46): error C2146: syntax error : missing ';' before identifier 'INuiAudioBeam'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(46): error C2086: 'int INuiAudioBeam' : redefinition
+                 C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(46) : see declaration of 'INuiAudioBeam'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(52): error C2146: syntax error : missing ';' before identifier 'INuiFrameTexture'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(52): warning C4091: '' : ignored on left of 'interface' when no variable is declared
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(58): error C2146: syntax error : missing ';' before identifier 'INuiCoordinateMapperParametersChangedEvent'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(58): warning C4091: '' : ignored on left of 'interface' when no variable is declared
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(64): error C2146: syntax error : missing ';' before identifier 'INuiCoordinateMapper'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(64): warning C4091: '' : ignored on left of 'interface' when no variable is declared
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(70): error C2146: syntax error : missing ';' before identifier 'INuiColorCameraSettings'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(70): warning C4091: '' : ignored on left of 'interface' when no variable is declared
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(76): error C2146: syntax error : missing ';' before identifier 'INuiSensor'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(76): warning C4091: '' : ignored on left of 'interface' when no variable is declared
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(543): error C2371: 'INuiFrameTexture' : redefinition; different basic types
+                 C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(52) : see declaration of 'INuiFrameTexture'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(666): error C2371: 'INuiCoordinateMapperParametersChangedEvent' : redefinition; different basic types
+                 C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(58) : see declaration of 'INuiCoordinateMapperParametersChangedEvent'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(743): error C2371: 'INuiCoordinateMapper' : redefinition; different basic types
+                 C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(64) : see declaration of 'INuiCoordinateMapper'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(980): error C2371: 'INuiColorCameraSettings' : redefinition; different basic types
+                 C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(70) : see declaration of 'INuiColorCameraSettings'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(1537): error C2371: 'INuiSensor' : redefinition; different basic types
+                 C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(76) : see declaration of 'INuiSensor'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(1625): error C2061: syntax error : identifier 'INuiAudioBeam'
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(2052): error C2065: 'ppDmo' : undeclared identifier
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(2052): warning C4229: anachronism used : modifiers on data are ignored
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(2052): error C2491: 'NuiGetAudioSource' : definition of dllimport data not allowed
+     1>C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc\NuiSensor.h(2052): fatal error C1903: unable to recover from previous error(s); stopping compilation
+         testApp.cpp
+     1>..\..\..\libs\openFrameworks\graphics\ofPixels.h(155): warning C4003: not enough actual parameters for macro 'max'
+     1>..\..\..\libs\openFrameworks\graphics\ofPixels.h(156): warning C4003: not enough actual parameters for macro 'max'
+         Generating Code...
+     1>Done Building Project "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\_JagSkillsPuppet\JagSkillsPuppet.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.73

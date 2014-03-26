@@ -1,0 +1,105 @@
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS SCALE X</Name>
+    <Value>0.116197184</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS SCALE Y</Name>
+    <Value>0.126760557</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS SCALE Z</Name>
+    <Value>0.126760557</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS ROT X</Name>
+    <Value>180.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS ROT Y</Name>
+    <Value>0.232386589</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS ROT Z</Name>
+    <Value>0.221829414</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS 1 POS X</Name>
+    <Value>-67.605636597</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS 1 POS Y</Name>
+    <Value>45.070434570</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS 1 POS Z</Name>
+    <Value>38.028167725</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS 2 POS X</Name>
+    <Value>80.281684875</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS 2 POS Y</Name>
+    <Value>45.070434570</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>DECKS 2 POS Z</Name>
+    <Value>38.028167725</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIXER SCALE X</Name>
+    <Value>0.098591551</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIXER SCALE Y</Name>
+    <Value>0.098591551</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIXER SCALE Z</Name>
+    <Value>0.098591551</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIXER ROT X</Name>
+    <Value>-180.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIXER ROT Y</Name>
+    <Value>-129.295776367</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIXER ROT Z</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIXER POS X</Name>
+    <Value>7.042264938</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIXER POS Y</Name>
+    <Value>53.521133423</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>MIXER POS Z</Name>
+    <Value>36.619712830</Value>
+</Widget>

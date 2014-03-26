@@ -1,0 +1,80 @@
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN WIDTH SCALE</Name>
+    <Value>0.053630140</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN HEIGHT SCALE</Name>
+    <Value>0.055308219</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN DEPTH SCALE</Name>
+    <Value>0.055308219</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN ROT X</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN ROT Y</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN ROT Z</Name>
+    <Value>-90.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN-LEGS CONNECT X</Name>
+    <Value>30.136989594</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN-LEGS SHLDER CONNECT Y</Name>
+    <Value>-3.424656391</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN-LEGS SHLDER CONNECT Z</Name>
+    <Value>8.219182968</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN DIST TO NEXT PNT</Name>
+    <Value>27.578765869</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>LEGS WIDTH SCALE</Name>
+    <Value>0.087191775</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>LEGS HEIGHT SCALE</Name>
+    <Value>0.082157537</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>LEGS DEPTH SCALE</Name>
+    <Value>0.082157537</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>LEGS ROT X</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>LEGS ROT Y</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>LEGS ROT Z</Name>
+    <Value>-90.000000000</Value>
+</Widget>

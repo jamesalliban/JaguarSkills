@@ -1,0 +1,95 @@
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO WIDTH SCALE</Name>
+    <Value>0.169417813</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO HEIGHT SCALE</Name>
+    <Value>0.159349307</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO DEPTH SCALE</Name>
+    <Value>0.153116435</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO ROT X</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO ROT Y</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO ROT Z</Name>
+    <Value>-90.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-LEFT SHLDER CONNECT X</Name>
+    <Value>10.273969650</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-LEFT SHLDER CONNECT Y</Name>
+    <Value>-28.082191467</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-LEFT SHLDER CONNECT Z</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-RIGHT SHLDER CONNECT X</Name>
+    <Value>10.273969650</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-RIGHT SHLDER CONNECT Y</Name>
+    <Value>28.082191467</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-RIGHT SHLDER CONNECT Z</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-ABDOMEN CONNECT X</Name>
+    <Value>45.205474854</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-ABDOMEN CONNECT Y</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-ABDOMEN CONNECT Z</Name>
+    <Value>7.534241676</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-HEAD CONNECT X</Name>
+    <Value>-23.287672043</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-HEAD CONNECT Y</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO-HEAD CONNECT Z</Name>
+    <Value>11.643838882</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO CONNECT DIST</Name>
+    <Value>17.356164932</Value>
+</Widget>

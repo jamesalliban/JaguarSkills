@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\testApp.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\ImageFrame.cpp">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\ImageStream.cpp">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\Kinect.cpp">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\KinectContext.cpp">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\SkeletonEngine.cpp">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\SkeletonFrame.cpp">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\AudioStream.cpp">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNui.cpp">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNuiDraw.cpp">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNuiPlayer.cpp">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNuiRecorder.cpp">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNuiSoundRecorder.cpp">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxKinectNui\src\win32\Event.cpp">
+      <Filter>addons\ofxKinectNui\src\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.cpp">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp">
+      <Filter>addons\ofxXmlSettings\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JagSkillsApp.cpp" />
+    <ClCompile Include="src\scene\body\BodyPart.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\Forearm.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\Hand.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\Legs.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\Torso.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\UpperArm.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\Abdomen.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\Scene.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kinect\KinectManager.cpp">
+      <Filter>kinect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kinect\ofxKinectPlayback\src\ofxSkeletonRecorder.cpp">
+      <Filter>kinect\ofxKinectPlayback\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GUI.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GUIManager.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\testApp.h" />
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\ImageFrame.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\ImageStream.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\Kinect.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\KinectContext.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\KinectListener.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\SkeletonEngine.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\SkeletonFrame.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\StaticMediaBuffer.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\WaveFileWriter.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\WaveOutput.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\kinect\nui\AudioStream.h">
+      <Filter>addons\ofxKinectNui\src\kinect\nui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\ofxBase3DVideo.h">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNui.h">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNuiDraw.h">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNuiDrawInterface.h">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNuiPlayer.h">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNuiRecorder.h">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\ofxKinectNuiSoundRecorder.h">
+      <Filter>addons\ofxKinectNui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\win32\Event.h">
+      <Filter>addons\ofxKinectNui\src\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxKinectNui\src\win32\SpinLock.h">
+      <Filter>addons\ofxKinectNui\src\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h">
+      <Filter>addons\ofxXmlSettings\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUICustomImageButton.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIDropDownList.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIEventArgs.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIFPS.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIFPSSlider.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIImage.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIImageButton.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIImageSampler.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIImageSlider.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIImageToggle.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUILabel.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUILabelButton.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUILabelToggle.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIMinimalSlider.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIMovingGraph.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIMultiImageButton.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIMultiImageSlider.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIMultiImageToggle.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUINumberDialer.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIRadio.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIRangeSlider.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIRectangle.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIRotarySlider.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIScrollableCanvas.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUISlider.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUISpacer.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUISpectrum.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUITextInput.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIToggle.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIToggleMatrix.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIWaveform.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIWidget.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIWidgetWithLabel.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUI.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUI2DPad.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIBiLabelSlider.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIButton.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUICanvas.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUICircleSlider.h">
+      <Filter>addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpUtils.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h">
+      <Filter>addons\ofxAssimpModelLoader\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMatrix4x4.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMesh.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiPostProcess.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiQuaternion.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiScene.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiTexture.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiTypes.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiVector2D.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiVector3D.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiVersion.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp.hpp">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\DefaultLogger.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\IOStream.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\IOSystem.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Logger.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\LogStream.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\NullLogger.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\ProgressHandler.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiAnim.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiAssert.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiCamera.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiColor4D.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiConfig.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiDefines.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiFileIO.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiLight.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMaterial.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMatrix3x3.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler\pushpack1.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler\poppack1.h">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KinectMan.h" />
+    <ClInclude Include="src\JagSkillsApp.h" />
+    <ClInclude Include="src\scene\body\BodyPart.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\Forearm.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\Hand.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\Legs.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\Torso.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\UpperArm.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\Abdomen.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\Scene.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kinect\KinectManager.h">
+      <Filter>kinect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kinect\ofxKinectPlayback\src\ofxSkeletonRecorder.h">
+      <Filter>kinect\ofxKinectPlayback\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kinect\ofxKinectPlayback\src\SkeletonDataObject.h">
+      <Filter>kinect\ofxKinectPlayback\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GUI.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GUIManager.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="addons">
+      <UniqueIdentifier>{d79abca0-5b91-4000-9e03-3b535f96d5b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxKinectNui">
+      <UniqueIdentifier>{41a2b0ca-3ef8-475b-97c2-628cf256ce13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxKinectNui\src">
+      <UniqueIdentifier>{809c12a3-2279-4bd9-bbb6-c3240fd0cb4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxKinectNui\src\win32">
+      <UniqueIdentifier>{d3504b56-a649-48f7-8400-d3dd631439f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxKinectNui\src\kinect">
+      <UniqueIdentifier>{d681c037-e330-4a88-89db-dad31d77dfe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxKinectNui\src\kinect\nui">
+      <UniqueIdentifier>{ebd74895-655a-46f0-a210-57d210bcaef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxXmlSettings">
+      <UniqueIdentifier>{ea456181-e9a6-4ee3-8dee-efc6120f4fb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxXmlSettings\libs">
+      <UniqueIdentifier>{0ba154a9-13b5-4810-95fb-801ff583aec2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxXmlSettings\src">
+      <UniqueIdentifier>{d0267c7e-bb95-4e04-93cb-13e0e8a5c6b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxUI">
+      <UniqueIdentifier>{2222aae1-7738-4f6d-80c0-45d5963ef83e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxUI\src">
+      <UniqueIdentifier>{1b7c18a0-afeb-4286-a2b3-956a00cf8111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader">
+      <UniqueIdentifier>{5d191bad-2b35-451e-a373-d62f14644658}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs">
+      <UniqueIdentifier>{7ff20817-fda4-4689-be02-c7994c0c78d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp">
+      <UniqueIdentifier>{1bfd49ff-420a-4032-9e47-023d9c62afe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include">
+      <UniqueIdentifier>{980d15fe-50f7-43c2-afc1-8afaa0303327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\Compiler">
+      <UniqueIdentifier>{6dcb400a-1a41-42af-9598-6b1d5efe5ee6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxAssimpModelLoader\src">
+      <UniqueIdentifier>{f87ec745-6d52-4749-aac0-995b9baed404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{8edff8b4-1eac-4e5b-b177-8fe17b8ecbc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kinect">
+      <UniqueIdentifier>{4a81f568-2c0c-44e7-a779-f22d18d8e588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene">
+      <UniqueIdentifier>{193cb97f-3b8f-459f-abc3-e174e72224e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene\body">
+      <UniqueIdentifier>{e906f9ef-6115-440a-abda-08e94599e586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kinect\ofxKinectPlayback">
+      <UniqueIdentifier>{a6a6a9e4-e5b0-40ce-aaef-9f5713701e92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kinect\ofxKinectPlayback\src">
+      <UniqueIdentifier>{f325d033-a3c9-45d1-8d6c-27855bea2446}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMatrix4x4.inl">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </None>
+    <None Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiVector3D.inl">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </None>
+    <None Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiColor4D.inl">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </None>
+    <None Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMaterial.inl">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </None>
+    <None Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMatrix3x3.inl">
+      <Filter>addons\ofxAssimpModelLoader\libs\assimp\include</Filter>
+    </None>
+  </ItemGroup>
+</Project>

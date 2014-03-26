@@ -1,0 +1,31 @@
+﻿Build started 25/03/2014 06:39:02.
+     1>Project "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\kinectNuiExample.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "obj\Release\kinectNuiExample.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         kinectNuiExample.vcxproj -> C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\bin\kinectNuiExample.exe
+       PostBuildEvent:
+         Description: adding DLLs and creating data folder
+         xcopy /e /i /y "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\..\..\..\export\vs2010\*.dll" "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\bin"
+         if not exist "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\bin\data" mkdir  "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\bin\data"
+         
+         :VCEnd
+         C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\..\..\..\export\vs2010\Assimp32.dll
+         C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\..\..\..\export\vs2010\fmodex.dll
+         C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\..\..\..\export\vs2010\fmodexL.dll
+         C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\..\..\..\export\vs2010\FreeImage.dll
+         C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\..\..\..\export\vs2010\FreeType-6.dll
+         C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\..\..\..\export\vs2010\glut32.dll
+         C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\\..\..\..\export\vs2010\Zlib.dll
+         7 File(s) copied
+       FinalizeBuildStatus:
+         Deleting file "obj\Release\kinectNuiExample.unsuccessfulbuild".
+         Touching "obj\Release\kinectNuiExample.lastbuildstate".
+     1>Done Building Project "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\JagSkillsPuppet - backup\kinectNuiExample.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.11

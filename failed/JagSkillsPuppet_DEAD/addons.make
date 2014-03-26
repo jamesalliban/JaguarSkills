@@ -1,0 +1,4 @@
+ofxAssimpModelLoader
+ofxXmlSettings
+ofxKinectNui
+ofxUI

@@ -1,0 +1,71 @@
+﻿Build started 25/03/2014 05:50:23.
+     1>Project "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\ofxKinectNuiExample\kinectNuiExample.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "obj\Release\kinectNuiExample.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\..\libs\openFrameworks /I..\..\..\libs\openFrameworks\graphics /I..\..\..\libs\openFrameworks\app /I..\..\..\libs\openFrameworks\sound /I..\..\..\libs\openFrameworks\utils /I..\..\..\libs\openFrameworks\communication /I..\..\..\libs\openFrameworks\video /I..\..\..\libs\openFrameworks\math /I..\..\..\libs\openFrameworks\types /I..\..\..\libs\openFrameworks\events /I..\..\..\libs\glut\include /I..\..\..\libs\rtAudio\include /I..\..\..\libs\quicktime\include /I..\..\..\libs\freetype\include /I..\..\..\libs\freetype\include\freetype2 /I..\..\..\libs\freeImage\include /I..\..\..\libs\fmodex\include /I..\..\..\libs\videoInput\include /I..\..\..\libs\glew\include\ /I..\..\..\libs\glu\include /I..\..\..\libs\poco\include /I..\..\..\addons /I..\..\..\libs\openFrameworks\gl /I..\..\..\libs\openFrameworks\3d /I..\..\..\libs\tess2\include /I..\..\..\libs\cairo\include\cairo /I"C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc" /I..\..\..\addons\ofxKinectNui\src /I..\..\..\addons\ofxXmlSettings\libs /I..\..\..\addons\ofxXmlSettings\src /I..\..\..\addons\ofxUI\src /I..\..\..\addons\ofxAssimpModelLoader\libs /I..\..\..\addons\ofxAssimpModelLoader\libs\assimp /I..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include /I..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler /I..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib /I..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs2010 /I..\..\..\addons\ofxAssimpModelLoader\src /Isrc /Isrc\gui /Isrc\kinect /Isrc\kinect\ofxKinectPlayback\src /Isrc\scene /Isrc\scene\body /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D POCO_STATIC /D CAIRO_WIN32_STATIC_BUILD /D DISABLE_SOME_FLOATING_POINT /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\Release\\" /Fd"obj\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\gui\GUI.cpp src\kinect\KinectManager.cpp src\main.cpp src\testApp.cpp
+         GUI.cpp
+     1>src\kinect\KinectManager.h(27): error C2146: syntax error : missing ';' before identifier 'kinectRecorder'
+     1>src\kinect\KinectManager.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>src\kinect\KinectManager.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+         KinectManager.cpp
+     1>c:\of_v0.7.4_vs2010_release\apps\jaguarskills\ofxkinectnuiexample\src\kinect\KinectManager.h(27): error C2146: syntax error : missing ';' before identifier 'kinectRecorder'
+     1>c:\of_v0.7.4_vs2010_release\apps\jaguarskills\ofxkinectnuiexample\src\kinect\KinectManager.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\of_v0.7.4_vs2010_release\apps\jaguarskills\ofxkinectnuiexample\src\kinect\KinectManager.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\of_v0.7.4_vs2010_release\apps\jaguarskills\ofxkinectnuiexample\src\kinect\KinectManager.h(28): error C2065: 'SkeletonDataObject' : undeclared identifier
+     1>src\kinect\KinectManager.cpp(15): error C2065: 'kinectRecorder' : undeclared identifier
+     1>src\kinect\KinectManager.cpp(15): error C2228: left of '.setup' must have class/struct/union
+                 type is ''unknown-type''
+     1>src\kinect\KinectManager.cpp(22): error C2065: 'kinectRecorder' : undeclared identifier
+     1>src\kinect\KinectManager.cpp(22): error C2228: left of '.isPlaybackActive' must have class/struct/union
+                 type is ''unknown-type''
+     1>src\kinect\KinectManager.cpp(24): error C2662: 'std::vector<_Ty,_Ax>::clear' : cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Ax> &'
+                 Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Ax>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>src\kinect\KinectManager.cpp(25): error C2065: 'kinectRecorder' : undeclared identifier
+     1>src\kinect\KinectManager.cpp(25): error C2228: left of '.getRecordedSkeletons' must have class/struct/union
+                 type is ''unknown-type''
+     1>src\kinect\KinectManager.cpp(40): error C2662: 'std::vector<_Ty,_Ax>::size' : cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Ax> &'
+                 Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Ax>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>src\kinect\KinectManager.cpp(42): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\vector(911): could be 'vector<_Ty,_Ax>::_Alloc::const_reference std::vector<_Ty,_Ax>::operator [](vector<_Ty,_Ax>::_Alloc::size_type) const'
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\vector(927): or       'vector<_Ty,_Ax>::_Alloc::reference std::vector<_Ty,_Ax>::operator [](vector<_Ty,_Ax>::_Alloc::size_type)'
+                 while trying to match the argument list '(std::vector, int)'
+         main.cpp
+     1>src\kinect\KinectManager.h(27): error C2146: syntax error : missing ';' before identifier 'kinectRecorder'
+     1>src\kinect\KinectManager.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>src\kinect\KinectManager.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>src\kinect\KinectManager.h(28): error C2065: 'SkeletonDataObject' : undeclared identifier
+     1>src\main.cpp(12): error C2512: 'testApp' : no appropriate default constructor available
+         testApp.cpp
+     1>src\kinect\KinectManager.h(27): error C2146: syntax error : missing ';' before identifier 'kinectRecorder'
+     1>src\kinect\KinectManager.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>src\kinect\KinectManager.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>src\kinect\KinectManager.h(28): error C2065: 'SkeletonDataObject' : undeclared identifier
+     1>src\testApp.cpp(34): error C2039: 'kinectRecorder' : is not a member of 'KinectManager'
+                 src\kinect\KinectManager.h(16) : see declaration of 'KinectManager'
+     1>src\testApp.cpp(34): error C2228: left of '.startPlayback' must have class/struct/union
+     1>src\testApp.cpp(48): error C2662: 'std::vector<_Ty,_Ax>::size' : cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Ax> &'
+                 Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Ax>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>src\testApp.cpp(49): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\vector(911): could be 'vector<_Ty,_Ax>::_Alloc::const_reference std::vector<_Ty,_Ax>::operator [](vector<_Ty,_Ax>::_Alloc::size_type) const'
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\vector(927): or       'vector<_Ty,_Ax>::_Alloc::reference std::vector<_Ty,_Ax>::operator [](vector<_Ty,_Ax>::_Alloc::size_type)'
+                 while trying to match the argument list '(std::vector, int)'
+     1>src\testApp.cpp(57): error C2662: 'std::vector<_Ty,_Ax>::size' : cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Ax> &'
+                 Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Ax>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>src\testApp.cpp(58): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\vector(911): could be 'vector<_Ty,_Ax>::_Alloc::const_reference std::vector<_Ty,_Ax>::operator [](vector<_Ty,_Ax>::_Alloc::size_type) const'
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\vector(927): or       'vector<_Ty,_Ax>::_Alloc::reference std::vector<_Ty,_Ax>::operator [](vector<_Ty,_Ax>::_Alloc::size_type)'
+                 while trying to match the argument list '(std::vector, int)'
+     1>src\testApp.cpp(69): error C2039: 'kinectRecorder' : is not a member of 'KinectManager'
+                 src\kinect\KinectManager.h(16) : see declaration of 'KinectManager'
+     1>src\testApp.cpp(69): error C2228: left of '.startPlayback' must have class/struct/union
+         Generating Code...
+     1>Done Building Project "C:\of_v0.7.4_vs2010_release\apps\JaguarSkills\ofxKinectNuiExample\kinectNuiExample.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.91
