@@ -1,4 +1,0 @@
-ofxAssimpModelLoader
-ofxXmlSettings
-ofxKinectNui
-ofxUI

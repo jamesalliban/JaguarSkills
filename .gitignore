@@ -22,8 +22,8 @@
 *.exe
 *.exp
 *.lib
-JagSkills/ipch
-JagSkills/obj
+JagSkillsPuppet/ipch
+JagSkillsPuppet/obj
 
 .DS_Store
 #.app
@@ -38,8 +38,8 @@ JagSkills/obj
 *.exe
 *.exp
 *.lib
-JagSkills/ipch
-JagSkills/obj
+JagSkillsPuppet/ipch
+JagSkillsPuppet/obj
 
 .DS_Store
 .app
