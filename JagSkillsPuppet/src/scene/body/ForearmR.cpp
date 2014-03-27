@@ -1,14 +1,14 @@
 //
-//  Forearm.cpp
+//  ForearmR.cpp
 //  JagSkills
 //
 //  Created by James Alliban's MBP on 22/03/2014.
 //
 //
 
-#include "Forearm.h"
+#include "ForearmR.h"
 
-void Forearm::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, ofShader *_shader)
+void ForearmR::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, ofShader *_shader)
 {
     BodyPart::setup(modelPath, _texture, _bumpMap, _shader);
     
@@ -18,7 +18,7 @@ void Forearm::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, 
 }
 
 
-void Forearm::drawFaces()
+void ForearmR::drawFaces()
 {
     BodyPart::drawFaces();
     BodyPart::formatConnections();
@@ -26,7 +26,7 @@ void Forearm::drawFaces()
 
 
 
-void Forearm::drawWireframe()
+void ForearmR::drawWireframe()
 {
     BodyPart::drawWireframe();
     formatConnections();

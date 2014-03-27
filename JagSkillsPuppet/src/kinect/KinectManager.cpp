@@ -44,9 +44,9 @@ void KinectManager::setup()
 	//angle = kinect.getCurrentAngle();
 	//bPlugged = kinect.isConnected();
 
-	bDrawVideo = true;
-	bDrawDepthLabel = true;
-	bDrawSkeleton = true;
+	bDrawVideo = false;
+	bDrawDepthLabel = false;
+	bDrawSkeleton = false;
 	bDrawCalibratedTexture = false;
 
 	videoDraw_ = ofxKinectNuiDrawTexture::createTextureForVideo(kinect.getVideoResolution());
@@ -57,6 +57,17 @@ void KinectManager::setup()
 	kinect.setDepthDrawer(depthDraw_);
 	kinect.setLabelDrawer(labelDraw_);
 	kinect.setSkeletonDrawer(skeletonDraw_);
+	
+	framesSinceSkeletonLost = 0;
+	for(int i = 0; i < 1; i++)
+	{
+		SkeletonDataObject skelData;
+		for (int j = 0; j < ofxKinectNui::SKELETON_POSITION_COUNT; j++)
+		{
+			skelData.skeletonPositions.push_back(ofVec3f(0, 0, 0));
+		}
+		smoothSkeletons.push_back(skelData);
+	}
 }
 
 
@@ -64,31 +75,25 @@ void KinectManager::setup()
 void KinectManager::update()
 {
 	if (isKinectAttached)
-	{
 		kinectSource->update();
-	}
 
 	ofPoint* skelPoints[ofxKinectNui::SKELETON_COUNT];
 		
 	int skeletonCount = kinect.getSkeletonPoints(skelPoints);
 
-	printf(" skeletonCount:%i \n", skeletonCount);
-
-	skeletons.clear();
 
 	if(kinect.isFoundSkeleton())
 	{
+		framesSinceSkeletonLost = 0;
+		skeletons.clear();
 		for(int i = 0; i < ofxKinectNui::SKELETON_COUNT; i++)
 		{
 			if(kinect.isTrackedSkeleton(i))
 			{
 				SkeletonDataObject skelData;
-				//skelData.trackingID = i;
 				for(int j = 0; j < ofxKinectNui::SKELETON_POSITION_COUNT; j++)
 				{
 					ofPoint joint = skelPoints[i][j];
-					//printf("skelPoints[%i], x:%f, y:%f, z:%f \n", j, joint.x, joint.y, joint.z);
-					
 					skelData.skeletonPositions.push_back(joint);
 				}
 				skeletons.push_back(skelData);
@@ -96,73 +101,13 @@ void KinectManager::update()
 		}
 		formatSkeletonData();
 	}
-
-
-
-	if (skeletonCount > 0)
+	else
 	{
-		int n = skeletonCount * 20;
-		for (int j = 0; j < n; j++)
+		if (++framesSinceSkeletonLost > 2)
 		{
-			//printf("skelPoints[%i], x:%f, y:%f, z:%f \n", j, skelPoints[j]->x, skelPoints[j]->y, skelPoints[j]->z);
+			skeletons.clear();
 		}
 	}
-		//}
-	//}
-
-
-
-	////Loop through all skeleton containers from ofxKinectNui
-	//for(int i = 0; i < kinect::nui::SkeletonFrame::SKELETON_COUNT; i++)
-	//{
-	//	ofPoint skelPoint = kinect.getSkeletonPoints()[i][0];
-	//	//is this ofxKinectNui skeleton is empty
-	//	if (skelPoint.x == -1 && skelPoint.y == -1 && skelPoint.z == -1) 
-	//	{
-	//		//Check SkeletonData objects to see if there is a skel with this array index and if it was 
-	//		//previously active. If so, reset the SkeletonData object
-	//		for (int j = 0; j < (int)skeletonDataObjects.size(); j++)
-	//			if (skeletonDataObjects[j].arrayIndex == i && skeletonDataObjects[j].isActive)
-	//				resetSkeletonData(j);
-	//	}
-	//	
-	//	
-	//	//if ofxKinectNui skeleton is active 
-	//	if (skelPoint.x != -1 && skelPoint.y != -1 && skelPoint.z != -1) 
-	//	{
-	//		bool hasNewSkeletonBeenAsigned = false;
-	//		//loop through SkeletonData objects to see if one has this arrayIndex
-	//		for (int j = 0; j < (int)skeletonDataObjects.size(); j++)
-	//		{
-	//			SkeletonData* skelData = &skeletonDataObjects[j];
-	//			//if there is a match, populate it with the data from this skeleton
-	//			if (skelData->arrayIndex == i)
-	//			{
-	//				populateSkeletonData(i, j, false);
-	//				hasNewSkeletonBeenAsigned = true;
-	//			}
-	//			if (hasNewSkeletonBeenAsigned) break;
-	//		}
-
-	//		//the skeleton has not been assigned so it is new. 
-	//		if (!hasNewSkeletonBeenAsigned)
-	//		{
-	//			//Loop through the SkeletonData objects to find the first empty one, assign it to this 
-	//			//array index and populate it with data
-	//			for (int j = 0; j < (int)skeletonDataObjects.size(); j++)
-	//			{
-	//				SkeletonData* skelData = &skeletonDataObjects[j];
-	//				if (!skelData->isActive)
-	//				{
-	//					populateSkeletonData(i, j, true);
-	//					break;
-	//				}
-	//			}
-	//		}
-	//	}
-	//}
-
-
 
 
     if (isKinectAttached && kinectRecorder.isPlaybackActive())
@@ -171,13 +116,25 @@ void KinectManager::update()
         skeletons = kinectRecorder.getRecordedSkeletons();
         formatSkeletonData();
     }
+
+	// smoothing
+	if(kinect.isFoundSkeleton())
+	{
+		for (int i = 0; i < skeletons.size(); i++)
+		{
+			for(int j = 0; j < ofxKinectNui::SKELETON_POSITION_COUNT; j++)
+			{
+				smoothSkeletons[i].skeletonPositions[j] -= (smoothSkeletons[i].skeletonPositions[j] - skeletons[i].skeletonPositions[j]) * skeletonSmoothing;
+			}
+		}
+	}
 }
 
 
 
 void KinectManager::draw()
 {
-	//ofSetColor(255);
+	ofSetColor(255);
     //kinectRecorder.draw(0,0);
 
 	// Draw video only
@@ -256,30 +213,24 @@ void KinectManager::formatSkeletonData()
             
             // this places the user in the centre of the scene. The skeleton range is usually 1-320. This sets the range to -160 - 160
             joint->x -= 160;
-            //joint->y -= 120;
-            //joint->z -= 15000;
-            
-            
             // y comes in upside down and z is in 10ths of a millimeter - this fixes that
-            joint->y -= 240;
+			joint->y -= 240;
             joint->y *= -1;
             joint->z = (joint->z * -1) * skeletonZReductionScale;
             
-            //            // rotate skeleton
+            // rotate skeleton
             joint->rotate(skeletonRotDegrees, ofVec3f(0.0, 0.0, 0.0), ofVec3f(1, 0, 0));
-//
-//            // offset positions
-//            joint->x += jointPosOffset.x; //userMan->skeletonPosOffsetX[clientID];
+
+            // offset positions
+            joint->x += jointPosOffset.x; // userMan->skeletonPosOffsetX[clientID];
             joint->y += jointPosOffset.y; // -65;
             joint->z += jointPosOffset.z; // 92;
-//
-//            // adjust scale
-//            if (isSkelScaled)
-//            {
-//                joint->x *= userMan->skeletonScale[clientID];
-//                joint->y *= userMan->skeletonScale[clientID];
-//                joint->z *= userMan->skeletonScale[clientID];
-//            }
+
+            // adjust scale
+			joint->x *= jointScale;
+            joint->y *= jointScale;
+            joint->z *= jointScale;
+
 //
 //            if (isSkelScaleFromZ)
 //            {

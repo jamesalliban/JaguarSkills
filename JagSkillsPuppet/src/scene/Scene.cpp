@@ -13,7 +13,7 @@ void Scene::setup()
     easyCam.setNearClip(0);
     easyCam.setFarClip(2000);
     easyCam.setDistance(200);
-    easyCam.setPosition(0, 80, 200);
+    easyCam.setPosition(0, 40, 200);
     
     light.setPosition(-200, 200, 200);
     
@@ -28,21 +28,24 @@ void Scene::setup()
     pantsBumpImg.loadImage("models/texturesv1/pants_norm.tif");
     
 
+	
+    legs.setup("models/pants_separate.obj", &pantsImg.getTextureReference(), &pantsBumpImg.getTextureReference(), &shader);
+	abdomen.setup("models/belly_separate.obj", &pantsImg.getTextureReference(), &pantsBumpImg.getTextureReference(), &shader);
 
     torso.setup("models/chest_separate.obj", &chestImg.getTextureReference(), &chestBumpImg.getTextureReference(), &shader);
     //head.setup("models/head.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
     head.setup("models/headweyes.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
     //head.setup("models/animheadtest.dae", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
-	abdomen.setup("models/belly_separate.obj", &pantsImg.getTextureReference(), &pantsBumpImg.getTextureReference(), &shader);
-    legs.setup("models/pants_separate.obj", &pantsImg.getTextureReference(), &pantsBumpImg.getTextureReference(), &shader);
+
     upperArmL.setup("models/Rupperarm.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
     upperArmR.setup("models/Lupperarm.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
     forearmL.setup("models/Rlowerarm.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
     forearmR.setup("models/Llowerarm.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
     handL.setup("models/Rhand.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
     handR.setup("models/Lhand.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
-    
 
+
+	
 
 	
     decks.loadModel("models/DJ_Deck.obj", true);
@@ -68,21 +71,24 @@ void Scene::update(SkeletonDataObject skeleton)
 
     viewport = ofRectangle(0, 0, ofGetWidth(), ofGetHeight());
     light.setPosition(lightPosition.x, lightPosition.y, lightPosition.z);
+	
+    // calculate the target positions for abdomen and legs as they are special cases
+    ofVec3f legTarget = ofVec3f(skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].x,
+                                skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].y - 100,
+                                skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].z);
     
-    torso.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE], skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE]);
+    //ofVec3f abdomenTarget = ofVec3f(ofLerp(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].x, skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].x, 0.5),
+    //                                skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].y,
+    //                                ofLerp(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].z, skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].z, 0.5));
+    //
+
+
+	legs.update(skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE], legTarget);
+	abdomen.update(skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE], skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].getInterpolated(skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE], 0.5));
+    
+    torso.update(skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE], skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE]);
     head.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE], skeleton.skeletonPositions[KINECT_SDK_HEAD]);
 
-    // calculate the target positions for abdomen and legs as they are special cases
-    ofVec3f legTarget = ofVec3f(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].x,
-                                skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].y,
-                                skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].z);
-    
-    ofVec3f abdomenTarget = ofVec3f(ofLerp(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].x, skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].x, 0.5),
-                                    skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].y,
-                                    ofLerp(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].z, skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].z, 0.5));
-    
-    abdomen.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE], abdomenTarget);
-    legs.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE], legTarget);
     
     upperArmL.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_LEFT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT]);
     upperArmR.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_RIGHT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_RIGHT]);
@@ -98,6 +104,7 @@ void Scene::update(SkeletonDataObject skeleton)
 
 void Scene::draw(SkeletonDataObject skeleton)
 {
+	ofEnableAlphaBlending();
     glEnable(GL_DEPTH_TEST);
 
     easyCam.begin(viewport);
@@ -113,17 +120,36 @@ void Scene::draw(SkeletonDataObject skeleton)
     
     ofSetColor(255, modelAlpha);
 
-    // set origins for head and torso to shoulder centre
-    torso.originPoint = &skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE];
-    head.originPoint = &torso.connectingPointsAbsolute[3];
-    abdomen.originPoint = &torso.connectingPointsAbsolute[2];
-    legs.originPoint = &abdomen.connectingPointsAbsolute[0];
+
+	ofVec3f legOrigin = ofVec3f(skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].x, 0, skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE].z);
+	// set origins for head and torso to shoulder centre
+	legs.originPoint = &legOrigin;
+    abdomen.originPoint = &legs.connectingPointsAbsolute[0];
+    torso.originPoint = &abdomen.connectingPointsAbsolute[0];
+    head.originPoint = &torso.connectingPointsAbsolute[2];
     upperArmL.originPoint = &torso.connectingPointsAbsolute[0];
     upperArmR.originPoint = &torso.connectingPointsAbsolute[1];
     forearmL.originPoint = &upperArmL.connectingPointsAbsolute[0];
     forearmR.originPoint = &upperArmR.connectingPointsAbsolute[0];
     handL.originPoint = &forearmL.connectingPointsAbsolute[0];
     handR.originPoint = &forearmR.connectingPointsAbsolute[0];
+
+
+    // set origins for head and torso to shoulder centre
+    //torso.originPoint = &skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE];
+    //head.originPoint = &torso.connectingPointsAbsolute[3];
+    //abdomen.originPoint = &torso.connectingPointsAbsolute[2];
+    //legs.originPoint = &abdomen.connectingPointsAbsolute[0];
+    //upperArmL.originPoint = &torso.connectingPointsAbsolute[0];
+    //upperArmR.originPoint = &torso.connectingPointsAbsolute[1];
+    //forearmL.originPoint = &upperArmL.connectingPointsAbsolute[0];
+    //forearmR.originPoint = &upperArmR.connectingPointsAbsolute[0];
+    //handL.originPoint = &forearmL.connectingPointsAbsolute[0];
+    //handR.originPoint = &forearmR.connectingPointsAbsolute[0];
+
+
+
+
     
     if (isDrawModel)
     {
@@ -182,7 +208,7 @@ void Scene::draw(SkeletonDataObject skeleton)
     
     if (isDrawDebug)
     {
-        torso.drawDebug(ofColor(255, 0, 0));
+        torso.drawDebug(ofColor(255, 0, 255));
         head.drawDebug(ofColor(255, 255, 0));
         abdomen.drawDebug(ofColor(255, 255, 0));
         legs.drawDebug(ofColor(255, 255, 0));
@@ -222,6 +248,8 @@ void Scene::draw(SkeletonDataObject skeleton)
     easyCam.end();
     
 	glDisable(GL_DEPTH_TEST);
+	
+	ofDisableAlphaBlending();
 }
 
 

@@ -14,9 +14,12 @@
 #include "Torso.h"
 #include "Abdomen.h"
 #include "Legs.h"
-#include "UpperArm.h"
-#include "Forearm.h"
-#include "Hand.h"
+#include "UpperArmR.h"
+#include "UpperArmL.h"
+#include "ForearmR.h"
+#include "ForearmL.h"
+#include "HandR.h"
+#include "HandL.h"
 #include "ofxAssimpModelLoader.h"
 
 
@@ -43,12 +46,12 @@ public:
     Abdomen abdomen;
     Legs legs;
     BodyPart head;
-    UpperArm upperArmL;
-    UpperArm upperArmR;
-    Forearm forearmL;
-    Forearm forearmR;
-    Hand handL;
-    Hand handR;
+    UpperArmL upperArmL;
+    UpperArmR upperArmR;
+    ForearmL forearmL;
+    ForearmR forearmR;
+    HandL handL;
+    HandR handR;
 	
     ofxAssimpModelLoader decks;
 	ofImage decksImg;

@@ -23,6 +23,8 @@ public:
 
 	//KinectManager variables - they are here because ofofxKinectNui bollocks
 	ofVec3f jointPosOffset;
+	float jointScale;
     float skeletonZReductionScale;
     float skeletonRotDegrees;
+	float skeletonSmoothing;
 };

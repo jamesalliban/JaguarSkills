@@ -67,19 +67,10 @@
     <ClCompile Include="src\scene\body\BodyPart.cpp">
       <Filter>scene\body</Filter>
     </ClCompile>
-    <ClCompile Include="src\scene\body\Forearm.cpp">
-      <Filter>scene\body</Filter>
-    </ClCompile>
-    <ClCompile Include="src\scene\body\Hand.cpp">
-      <Filter>scene\body</Filter>
-    </ClCompile>
     <ClCompile Include="src\scene\body\Legs.cpp">
       <Filter>scene\body</Filter>
     </ClCompile>
     <ClCompile Include="src\scene\body\Torso.cpp">
-      <Filter>scene\body</Filter>
-    </ClCompile>
-    <ClCompile Include="src\scene\body\UpperArm.cpp">
       <Filter>scene\body</Filter>
     </ClCompile>
     <ClCompile Include="src\scene\body\Abdomen.cpp">
@@ -99,6 +90,24 @@
     </ClCompile>
     <ClCompile Include="src\gui\GUIManager.cpp">
       <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\ForearmR.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\UpperArmR.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\HandR.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\ForearmL.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\HandL.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\body\UpperArmL.cpp">
+      <Filter>scene\body</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -391,24 +400,14 @@
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler\poppack1.h">
       <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\Compiler</Filter>
     </ClInclude>
-    <ClInclude Include="src\KinectMan.h" />
     <ClInclude Include="src\JagSkillsApp.h" />
     <ClInclude Include="src\scene\body\BodyPart.h">
-      <Filter>scene\body</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\body\Forearm.h">
-      <Filter>scene\body</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\body\Hand.h">
       <Filter>scene\body</Filter>
     </ClInclude>
     <ClInclude Include="src\scene\body\Legs.h">
       <Filter>scene\body</Filter>
     </ClInclude>
     <ClInclude Include="src\scene\body\Torso.h">
-      <Filter>scene\body</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\body\UpperArm.h">
       <Filter>scene\body</Filter>
     </ClInclude>
     <ClInclude Include="src\scene\body\Abdomen.h">
@@ -431,6 +430,24 @@
     </ClInclude>
     <ClInclude Include="src\gui\GUIManager.h">
       <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\ForearmR.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\UpperArmR.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\HandR.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\ForearmL.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\HandL.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\UpperArmL.h">
+      <Filter>scene\body</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -38,10 +38,13 @@ public:
 
     ofxSkeletonRecorder kinectRecorder;
     vector<SkeletonDataObject> skeletons;
+    vector<SkeletonDataObject> smoothSkeletons;
     
     ofVec3f jointPosOffset;
+	float jointScale;
     float skeletonZReductionScale;
     float skeletonRotDegrees;
+	float skeletonSmoothing;
 
 	bool bPlugged;
 	bool isKinectAttached;
@@ -52,6 +55,9 @@ public:
 	bool bDrawDepthLabel;
 	bool bDrawSkeleton;
 	bool bDrawCalibratedTexture;
+
+	int framesSinceSkeletonLost;
+	
 
 	// Please declare these texture pointer and initialize when you want to draw them
 	ofxKinectNuiDrawTexture*	videoDraw_;

@@ -14,8 +14,12 @@ void Torso::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, of
     
     model.loadModel(modelPath, true);
     
+	//model.setPosition(-200, 0, 0);
+
+	isUseOfMesh = true;
+	
     // 3 connections for torso - L and R upper arms and abdomen
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 3; i++)
     {
         connectingPoints.push_back(ofVec3f(0,0,0));
         connectingPointsAbsolute.push_back(ofVec3f(0, 0, 0));
@@ -47,6 +51,18 @@ void Torso::formatConnections()
         // rotate and position the absolute connection ponts
         connectingPointsAbsolute[i] = connectingPoints[i];
         connectingPointsAbsolute[i].rotate(qangle, ofVec3f(qaxis.x, qaxis.y, qaxis.z));
-        connectingPointsAbsolute[i] += skelJointPos;
+        connectingPointsAbsolute[i] += *originPoint; //skelJointPos;
     }
+
+	ofPushStyle();
+    ofSetColor(0, 0, 255, 255);
+
+#ifdef TARGET_OSX
+    ofDrawSphere(connectingPointsAbsolute[0], 5);
+#else
+    ofSphere(connectingPointsAbsolute[0], 5);
+#endif
+
+	
+	ofPopStyle();
 }

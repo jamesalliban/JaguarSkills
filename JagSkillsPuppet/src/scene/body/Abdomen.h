@@ -17,5 +17,6 @@ public:
     virtual void setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, ofShader *_shader);
     virtual void drawFaces();
     virtual void drawWireframe();
+    virtual void formatConnections();
     
 };

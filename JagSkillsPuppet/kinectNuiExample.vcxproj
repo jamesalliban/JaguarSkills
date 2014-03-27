@@ -249,11 +249,14 @@ if not exist "$(ProjectDir)\bin\data" mkdir  "$(ProjectDir)\bin\data"
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\scene\body\Abdomen.cpp" />
     <ClCompile Include="src\scene\body\BodyPart.cpp" />
-    <ClCompile Include="src\scene\body\Forearm.cpp" />
-    <ClCompile Include="src\scene\body\Hand.cpp" />
+    <ClCompile Include="src\scene\body\ForearmL.cpp" />
+    <ClCompile Include="src\scene\body\ForearmR.cpp" />
+    <ClCompile Include="src\scene\body\HandL.cpp" />
+    <ClCompile Include="src\scene\body\HandR.cpp" />
     <ClCompile Include="src\scene\body\Legs.cpp" />
     <ClCompile Include="src\scene\body\Torso.cpp" />
-    <ClCompile Include="src\scene\body\UpperArm.cpp" />
+    <ClCompile Include="src\scene\body\UpperArmL.cpp" />
+    <ClCompile Include="src\scene\body\UpperArmR.cpp" />
     <ClCompile Include="src\scene\Scene.cpp" />
     <ClCompile Include="src\testApp.cpp" />
   </ItemGroup>
@@ -357,17 +360,19 @@ if not exist "$(ProjectDir)\bin\data" mkdir  "$(ProjectDir)\bin\data"
     <ClInclude Include="src\gui\GUI.h" />
     <ClInclude Include="src\gui\GUIManager.h" />
     <ClInclude Include="src\JagSkillsApp.h" />
-    <ClInclude Include="src\KinectMan.h" />
     <ClInclude Include="src\kinect\KinectManager.h" />
     <ClInclude Include="src\kinect\ofxKinectPlayback\src\ofxSkeletonRecorder.h" />
     <ClInclude Include="src\kinect\ofxKinectPlayback\src\SkeletonDataObject.h" />
     <ClInclude Include="src\scene\body\Abdomen.h" />
     <ClInclude Include="src\scene\body\BodyPart.h" />
-    <ClInclude Include="src\scene\body\Forearm.h" />
-    <ClInclude Include="src\scene\body\Hand.h" />
+    <ClInclude Include="src\scene\body\ForearmL.h" />
+    <ClInclude Include="src\scene\body\ForearmR.h" />
+    <ClInclude Include="src\scene\body\HandL.h" />
+    <ClInclude Include="src\scene\body\HandR.h" />
     <ClInclude Include="src\scene\body\Legs.h" />
     <ClInclude Include="src\scene\body\Torso.h" />
-    <ClInclude Include="src\scene\body\UpperArm.h" />
+    <ClInclude Include="src\scene\body\UpperArmL.h" />
+    <ClInclude Include="src\scene\body\UpperArmR.h" />
     <ClInclude Include="src\scene\Scene.h" />
     <ClInclude Include="src\testApp.h" />
   </ItemGroup>

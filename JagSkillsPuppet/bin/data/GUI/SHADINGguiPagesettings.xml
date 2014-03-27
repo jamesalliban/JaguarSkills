@@ -1,17 +1,22 @@
 <Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE SHADING</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
     <Kind>4</Kind>
     <Name>AMBIENT RED</Name>
-    <Value>0.047945205</Value>
+    <Value>0.045774646</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>AMBIENT GREEN</Name>
-    <Value>0.047945205</Value>
+    <Value>0.042253520</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>AMBIENT BLUE</Name>
-    <Value>0.047945205</Value>
+    <Value>0.038732395</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -21,7 +26,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>DIFFUSE RED</Name>
-    <Value>1.082191825</Value>
+    <Value>1.133802772</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -56,7 +61,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>SPECULAR ALPHA</Name>
-    <Value>1.000000000</Value>
+    <Value>0.556338012</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -66,7 +71,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>SHADOW INTENSITY</Name>
-    <Value>0.660958886</Value>
+    <Value>0.647887349</Value>
 </Widget>
 <Widget>
     <Kind>2</Kind>

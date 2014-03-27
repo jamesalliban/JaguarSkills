@@ -1,5 +1,5 @@
 //
-//  Hand.h
+//  UpperArmR.h
 //  JagSkills
 //
 //  Created by James Alliban's MBP on 22/03/2014.
@@ -11,10 +11,11 @@
 #include "ofMain.h"
 #include "BodyPart.h"
 
-class Hand : public BodyPart
+class UpperArmR : public BodyPart
 {
 public:
     virtual void setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, ofShader *_shader);
     virtual void drawFaces();
     virtual void drawWireframe();
+    
 };

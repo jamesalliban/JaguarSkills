@@ -1,0 +1,70 @@
+<Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE VISIBLE</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN WIDTH SCALE</Name>
+    <Value>4.385035038</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN HEIGHT SCALE</Name>
+    <Value>4.367465019</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN DEPTH SCALE</Name>
+    <Value>4.385035038</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN ROT X</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN ROT Y</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN ROT Z</Name>
+    <Value>-90.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN-TORSO CONNECT X</Name>
+    <Value>33.098590851</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN-TORSO CONNECT Y</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN-TORSO CONNECT Z</Name>
+    <Value>-7.746476173</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN DIST TO NEXT PNT</Name>
+    <Value>10.809859276</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN MESH VERT OFFSET X</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN MESH VERT OFFSET Y</Name>
+    <Value>-5.492958069</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>ABDOMEN MESH VERT OFFSET Z</Name>
+    <Value>0.000000000</Value>
+</Widget>

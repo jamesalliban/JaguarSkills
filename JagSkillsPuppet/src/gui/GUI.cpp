@@ -21,9 +21,10 @@ void GUI::setup(string _guiPath)
     addSceneGUI();
     addSkeletonGUI();
     addModelGlobalGUI();
+    addModelLegsGUI();
+    addModelAbdomenGUI();
     addModelTorsoGUI();
     addModelHeadGUI();
-    addModelAbdomenAndLegsGUI();
     addModelArmsLGUI();
     addModelArmsRGUI();
     addModelHandsGUI();
@@ -105,7 +106,7 @@ void GUI::addSkeletonGUI()
     gui->addLabel("POSITION OFFSET", OFX_UI_FONT_MEDIUM);
     gui->addSlider("JOINT OFFSET X", -300, 300, &app->jointPosOffset.x, length, dim);
     gui->addSlider("JOINT OFFSET Y", -300, 300, &app->jointPosOffset.y, length, dim);
-	gui->addSlider("JOINT OFFSET Z", -600, 600, &app->jointPosOffset.z, length, dim);
+	gui->addSlider("JOINT OFFSET Z", -1000, 1000, &app->jointPosOffset.z, length, dim);
 	
     gui->addLabel("ROTATION", OFX_UI_FONT_MEDIUM);
     gui->addSlider("ROT X DEGREES", -50, 50, &app->skeletonRotDegrees, length, dim);
@@ -117,6 +118,10 @@ void GUI::addSkeletonGUI()
 #else
 	gui->addSlider("Z REDUCTION SCALE", 0.001, 0.1, &app->skeletonZReductionScale, length, dim);
 #endif
+	
+	gui->addSlider("SCALE", 0.001, 2, &app->jointScale, length, dim);
+	gui->addSlider("JOINT SMOOTHING", 0.001, 1, &app->skeletonSmoothing, length, dim);
+	
 
     finaliseCanvas(gui);
 }
@@ -161,14 +166,16 @@ void GUI::addModelTorsoGUI()
     
     gui->addLabel("TORSO", OFX_UI_FONT_MEDIUM);
 	
+    gui->addToggle("TOGGLE VISIBLE", &app->scene.torso.isVisible, toggleSize, toggleSize);
+
 #ifdef TARGET_OSX
     gui->addSlider("TORSO WIDTH SCALE", 0.01, 0.5, &app->scene.torso.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("TORSO HEIGHT SCALE", 0.01, 0.5, &app->scene.torso.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("TORSO DEPTH SCALE", 0.01, 0.5, &app->scene.torso.scaleD, length, dim)->setLabelPrecision(4);
 #else
-    gui->addSlider("TORSO WIDTH SCALE", 0.01, 0.5, &app->scene.torso.scaleW, length, dim);
-    gui->addSlider("TORSO HEIGHT SCALE", 0.01, 0.5, &app->scene.torso.scaleH, length, dim);
-    gui->addSlider("TORSO DEPTH SCALE", 0.01, 0.5, &app->scene.torso.scaleD, length, dim);
+    gui->addSlider("TORSO WIDTH SCALE", 0.01, 5, &app->scene.torso.scaleW, length, dim);
+    gui->addSlider("TORSO HEIGHT SCALE", 0.01, 5, &app->scene.torso.scaleH, length, dim);
+    gui->addSlider("TORSO DEPTH SCALE", 0.01, 5, &app->scene.torso.scaleD, length, dim);
 #endif
     gui->addSpacer(length, 1);
     gui->addSlider("TORSO ROT X", -180, 180, &app->scene.torso.rotX, length, dim);
@@ -183,16 +190,16 @@ void GUI::addModelTorsoGUI()
     gui->addSlider("TORSO-RIGHT SHLDER CONNECT Y", -100, 100, &app->scene.torso.connectingPoints[1].y, length, dim);
     gui->addSlider("TORSO-RIGHT SHLDER CONNECT Z", -100, 100, &app->scene.torso.connectingPoints[1].z, length, dim);
     gui->addSpacer(length, 1);
-    gui->addSlider("TORSO-ABDOMEN CONNECT X", -100, 100, &app->scene.torso.connectingPoints[2].x, length, dim);
-    gui->addSlider("TORSO-ABDOMEN CONNECT Y", -100, 100, &app->scene.torso.connectingPoints[2].y, length, dim);
-    gui->addSlider("TORSO-ABDOMEN CONNECT Z", -100, 100, &app->scene.torso.connectingPoints[2].z, length, dim);
-    gui->addSpacer(length, 1);
-    gui->addSlider("TORSO-HEAD CONNECT X", -100, 100, &app->scene.torso.connectingPoints[3].x, length, dim);
-    gui->addSlider("TORSO-HEAD CONNECT Y", -100, 100, &app->scene.torso.connectingPoints[3].y, length, dim);
-    gui->addSlider("TORSO-HEAD CONNECT Z", -100, 100, &app->scene.torso.connectingPoints[3].z, length, dim);
+    gui->addSlider("TORSO-HEAD CONNECT X", -100, 100, &app->scene.torso.connectingPoints[2].x, length, dim);
+    gui->addSlider("TORSO-HEAD CONNECT Y", -100, 100, &app->scene.torso.connectingPoints[2].y, length, dim);
+    gui->addSlider("TORSO-HEAD CONNECT Z", -100, 100, &app->scene.torso.connectingPoints[2].z, length, dim);
     gui->addSpacer(length, 1);
     gui->addSlider("TORSO CONNECT DIST", 1, 200, &app->scene.torso.distToNextPoint, length, dim);
     gui->addSpacer(length, 1);
+	
+	gui->addSlider("TORSO MESH VERT OFFSET X", -20, 20, &app->scene.torso.meshVertsOffset.x, length, dim);
+    gui->addSlider("TORSO MESH VERT OFFSET Y", -20, 20, &app->scene.torso.meshVertsOffset.y, length, dim);
+    gui->addSlider("TORSO MESH VERT OFFSET Z", -20, 20, &app->scene.torso.meshVertsOffset.z, length, dim);
     
     
     finaliseCanvas(gui);
@@ -205,6 +212,7 @@ void GUI::addModelHeadGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("HEAD", OFX_UI_FONT_MEDIUM);
+    gui->addToggle("TOGGLE VISIBLE", &app->scene.head.isVisible, toggleSize, toggleSize);
 #ifdef TARGET_OSX
     gui->addSlider("HEAD WIDTH SCALE", 0.01, 0.5, &app->scene.head.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("HEAD HEIGHT SCALE", 0.01, 0.5, &app->scene.head.scaleH, length, dim)->setLabelPrecision(4);
@@ -224,20 +232,20 @@ void GUI::addModelHeadGUI()
 
 
 
-void GUI::addModelAbdomenAndLegsGUI()
+void GUI::addModelAbdomenGUI()
 {
-    string title = "ABDOMEN LEGS";
+    string title = "ABDOMEN";
     ofxUICanvas* gui = getNewGUI(title);
     
-    gui->addLabel("ABDOMEN", OFX_UI_FONT_MEDIUM);
+    gui->addToggle("TOGGLE VISIBLE", &app->scene.abdomen.isVisible, toggleSize, toggleSize);
 #ifdef TARGET_OSX
     gui->addSlider("ABDOMEN WIDTH SCALE", 0.01, 0.5, &app->scene.abdomen.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("ABDOMEN HEIGHT SCALE", 0.01, 0.5, &app->scene.abdomen.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("ABDOMEN DEPTH SCALE", 0.01, 0.5, &app->scene.abdomen.scaleD, length, dim)->setLabelPrecision(4);
 #else
-    gui->addSlider("ABDOMEN WIDTH SCALE", 0.01, 0.5, &app->scene.abdomen.scaleW, length, dim);
-    gui->addSlider("ABDOMEN HEIGHT SCALE", 0.01, 0.5, &app->scene.abdomen.scaleH, length, dim);
-    gui->addSlider("ABDOMEN DEPTH SCALE", 0.01, 0.5, &app->scene.abdomen.scaleD, length, dim);
+    gui->addSlider("ABDOMEN WIDTH SCALE", 0.01, 5, &app->scene.abdomen.scaleW, length, dim);
+    gui->addSlider("ABDOMEN HEIGHT SCALE", 0.01, 5, &app->scene.abdomen.scaleH, length, dim);
+    gui->addSlider("ABDOMEN DEPTH SCALE", 0.01, 5, &app->scene.abdomen.scaleD, length, dim);
 #endif
     gui->addSpacer(length, 1);
     gui->addSlider("ABDOMEN ROT X", -180, 180, &app->scene.abdomen.rotX, length, dim);
@@ -245,17 +253,29 @@ void GUI::addModelAbdomenAndLegsGUI()
     gui->addSlider("ABDOMEN ROT Z", -180, 180, &app->scene.abdomen.rotZ, length, dim);
     gui->addSpacer(length, 1);
 
-	printf("app->scene.abdomen.connectingPoints.size() = %i\n", app->scene.abdomen.connectingPoints.size());
-
-    gui->addSlider("ABDOMEN-LEGS CONNECT X", -100, 100, &app->scene.abdomen.connectingPoints[0].x, length, dim);
-    gui->addSlider("ABDOMEN-LEGS SHLDER CONNECT Y", -100, 100, &app->scene.abdomen.connectingPoints[0].y, length, dim);
-    gui->addSlider("ABDOMEN-LEGS SHLDER CONNECT Z", -100, 100, &app->scene.abdomen.connectingPoints[0].z, length, dim);
+    gui->addSlider("ABDOMEN-TORSO CONNECT X", -100, 100, &app->scene.abdomen.connectingPoints[0].x, length, dim);
+    gui->addSlider("ABDOMEN-TORSO CONNECT Y", -100, 100, &app->scene.abdomen.connectingPoints[0].y, length, dim);
+    gui->addSlider("ABDOMEN-TORSO CONNECT Z", -100, 100, &app->scene.abdomen.connectingPoints[0].z, length, dim);
 
     gui->addSpacer(length, 1);
     gui->addSlider("ABDOMEN DIST TO NEXT PNT", 1, 200, &app->scene.abdomen.distToNextPoint, length, dim);
+	
+    gui->addSpacer(length, 1);
+	
+	gui->addSlider("ABDOMEN MESH VERT OFFSET X", -20, 20, &app->scene.abdomen.meshVertsOffset.x, length, dim);
+    gui->addSlider("ABDOMEN MESH VERT OFFSET Y", -20, 20, &app->scene.abdomen.meshVertsOffset.y, length, dim);
+    gui->addSlider("ABDOMEN MESH VERT OFFSET Z", -20, 20, &app->scene.abdomen.meshVertsOffset.z, length, dim);
+
+    finaliseCanvas(gui);
+}
+	
+void GUI::addModelLegsGUI()
+{
+    string title = "LEGS";
+    ofxUICanvas* gui = getNewGUI(title);
+
+    gui->addToggle("TOGGLE VISIBLE", &app->scene.legs.isVisible, toggleSize, toggleSize);
     
-    
-    gui->addLabel("LEGS", OFX_UI_FONT_MEDIUM);
 #ifdef TARGET_OSX
     gui->addSlider("LEGS WIDTH SCALE", 0.01, 0.5, &app->scene.legs.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("LEGS HEIGHT SCALE", 0.01, 0.5, &app->scene.legs.scaleH, length, dim)->setLabelPrecision(4);
@@ -270,13 +290,14 @@ void GUI::addModelAbdomenAndLegsGUI()
     gui->addSlider("LEGS ROT Y", -180, 180, &app->scene.legs.rotY, length, dim);
     gui->addSlider("LEGS ROT Z", -180, 180, &app->scene.legs.rotZ, length, dim);
     gui->addSpacer(length, 1);
-    
-//    gui->addLabel("LEGS", OFX_UI_FONT_MEDIUM);
-//    gui->addSlider("LEGS WIDTH SCALE", 0.1, 10, &app->scene.head.scaleW, length, dim);
-//    gui->addSlider("LEGS HEIGHT SCALE", 0.1, 10, &app->scene.head.scaleH, length, dim);
-//    gui->addSlider("LEGS DEPTH SCALE", 0.1, 10, &app->scene.head.scaleD, length, dim);
-//    gui->addSpacer(length, 1);
-//    gui->addSlider("LEGS CONNECT DIST", 1, 200, &app->scene.head.distToNextPoint, length, dim);
+    gui->addSpacer(length, 1);
+
+    gui->addSlider("LEGS-ABDOMEN CONNECT X", -100, 100, &app->scene.legs.connectingPoints[0].x, length, dim);
+    gui->addSlider("LEGS-ABDOMEN CONNECT Y", -100, 100, &app->scene.legs.connectingPoints[0].y, length, dim);
+    gui->addSlider("LEGS-ABDOMEN CONNECT Z", -100, 100, &app->scene.legs.connectingPoints[0].z, length, dim);
+
+    gui->addSpacer(length, 1);
+    gui->addSlider("LEGS DIST TO NEXT PNT", -200, 200, &app->scene.legs.distToNextPoint, length, dim);
     
     finaliseCanvas(gui);
 }
@@ -288,6 +309,8 @@ void GUI::addModelArmsLGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("UPPER ARM", OFX_UI_FONT_MEDIUM);
+	
+    gui->addToggle("TOGGLE VISIBLE", &app->scene.upperArmL.isVisible, toggleSize, toggleSize);
 #ifdef TARGET_OSX
     gui->addSlider("UPPER ARM WIDTH SCALE", 0.01, 0.5, &app->scene.upperArmL.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("UPPER ARM HEIGHT SCALE", 0.01, 0.5, &app->scene.upperArmL.scaleH, length, dim)->setLabelPrecision(4);
@@ -310,6 +333,7 @@ void GUI::addModelArmsLGUI()
     gui->addSpacer(length, 1);
     
     gui->addLabel("FOREARM", OFX_UI_FONT_MEDIUM);
+    gui->addToggle("TOGGLE VISIBLE F", &app->scene.forearmL.isVisible, toggleSize, toggleSize);
 #ifdef TARGET_OSX
     gui->addSlider("FOREARM WIDTH SCALE", 0.01, 0.5, &app->scene.forearmL.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("FOREARM HEIGHT SCALE", 0.01, 0.5, &app->scene.forearmL.scaleH, length, dim)->setLabelPrecision(4);
@@ -340,6 +364,7 @@ void GUI::addModelArmsRGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("UPPER ARM", OFX_UI_FONT_MEDIUM);
+    gui->addToggle("TOGGLE VISIBLE", &app->scene.upperArmR.isVisible, toggleSize, toggleSize);
 #ifdef TARGET_OSX
     gui->addSlider("UPPER ARM WIDTH SCALE", 0.01, 0.5, &app->scene.upperArmR.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("UPPER ARM HEIGHT SCALE", 0.01, 0.5, &app->scene.upperArmR.scaleH, length, dim)->setLabelPrecision(4);
@@ -362,6 +387,7 @@ void GUI::addModelArmsRGUI()
     gui->addSpacer(length, 1);
     
     gui->addLabel("FOREARM", OFX_UI_FONT_MEDIUM);
+    gui->addToggle("TOGGLE VISIBLE F", &app->scene.forearmR.isVisible, toggleSize, toggleSize);
 #ifdef TARGET_OSX
     gui->addSlider("FOREARM WIDTH SCALE", 0.01, 0.5, &app->scene.forearmR.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("FOREARM HEIGHT SCALE", 0.01, 0.5, &app->scene.forearmR.scaleH, length, dim)->setLabelPrecision(4);
@@ -393,6 +419,7 @@ void GUI::addModelHandsGUI()
     ofxUICanvas* gui = getNewGUI(title);
     
     gui->addLabel("HAND LEFT", OFX_UI_FONT_MEDIUM);
+    gui->addToggle("TOGGLE VISIBLE L", &app->scene.handL.isVisible, toggleSize, toggleSize);
 #ifdef TARGET_OSX
     gui->addSlider("HAND LEFT WIDTH SCALE", 0.01, 0.5, &app->scene.handL.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("HANDS LEFT HEIGHT SCALE", 0.01, 0.5, &app->scene.handL.scaleH, length, dim)->setLabelPrecision(4);
@@ -408,6 +435,7 @@ void GUI::addModelHandsGUI()
     gui->addSlider("HANDS LEFT ROT Z", -180, 180, &app->scene.handL.rotZ, length, dim);
     
     gui->addLabel("HAND RIGHT", OFX_UI_FONT_MEDIUM);
+    gui->addToggle("TOGGLE VISIBLE R", &app->scene.handR.isVisible, toggleSize, toggleSize);
 #ifdef TARGET_OSX
     gui->addSlider("HAND RIGHT WIDTH SCALE", 0.01, 0.5, &app->scene.handR.scaleW, length, dim)->setLabelPrecision(4);
     gui->addSlider("HANDS RIGHT HEIGHT SCALE", 0.01, 0.5, &app->scene.handR.scaleH, length, dim)->setLabelPrecision(4);
@@ -472,6 +500,7 @@ void GUI::addShadingGUI()
     string title = "SHADING";
     ofxUICanvas* gui = getNewGUI(title);
     
+    gui->addToggle("TOGGLE SHADING", &BodyPart::isShadingActive, toggleSize, toggleSize);
     gui->addSlider("AMBIENT RED", 0, 0.5, &BodyPart::ambient.r, length, dim);
     gui->addSlider("AMBIENT GREEN", 0, 0.5, &BodyPart::ambient.g, length, dim);
     gui->addSlider("AMBIENT BLUE", 0, 0.5, &BodyPart::ambient.b, length, dim);

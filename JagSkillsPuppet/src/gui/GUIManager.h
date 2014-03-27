@@ -28,6 +28,7 @@ public:
     virtual void setup(string _guiPath);
     virtual bool getVisible();
     virtual bool isMouseOver();
+    void saveSettings();
     
     ofColor colorBack;
     ofColor colorFill;
@@ -42,6 +43,7 @@ protected:
     virtual void buildSideBarGUI();
     virtual ofxUICanvas* getNewGUI(string title);
     virtual void keyPressed(ofKeyEventArgs& eventArgs);
+    virtual void mouseReleased(ofMouseEventArgs& eventArgs);
     virtual void exit(ofEventArgs& eventArgs);
     virtual void finaliseCanvas(ofxUICanvas* gui, bool isSidebar = false);
     virtual void sideBarGUIEvent(ofxUIEventArgs &e);
@@ -54,7 +56,6 @@ protected:
     void showGUI(string guiName);
     void toggleVisible();
     
-    void saveSettings();
     
     void setGUIColour();
     

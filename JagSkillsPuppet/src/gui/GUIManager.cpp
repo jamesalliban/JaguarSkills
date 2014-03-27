@@ -15,6 +15,7 @@ void GUIManager::setup(string _guiPath)
     guiPath = _guiPath;
     
     ofAddListener(ofEvents().keyPressed, this, &GUIManager::keyPressed);
+    ofAddListener(ofEvents().mouseReleased, this, &GUIManager::mouseReleased);
     ofAddListener(ofEvents().exit, this, &GUIManager::exit);
     
     currentUIID = 0;
@@ -42,7 +43,6 @@ void GUIManager::setup(string _guiPath)
 
 bool GUIManager::getVisible()
 {
-    printf("getVisible \n");
     return isVisible;
 }
 
@@ -182,9 +182,15 @@ void GUIManager::keyPressed(ofKeyEventArgs& eventArgs) //int key)
 }
 
 
+void GUIManager::mouseReleased(ofMouseEventArgs& eventArgs)
+{
+	if (isAutoSave)
+		saveSettings();
+}
+
+
 void GUIManager::nextPage()
 {
-    printf("next\n");
 	++currentUIID;
 	if (currentUIID > guiPages.size() - 1) currentUIID = 0;
     showGUI(guiPages[currentUIID]->getName());
@@ -193,7 +199,6 @@ void GUIManager::nextPage()
 
 void GUIManager::previousPage()
 {
-    printf("prev\n");
 	--currentUIID;
 	if (currentUIID < 0) currentUIID = guiPages.size() - 1;
     showGUI(guiPages[currentUIID]->getName());

@@ -1,17 +1,22 @@
 <Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE VISIBLE</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
     <Kind>4</Kind>
     <Name>TORSO WIDTH SCALE</Name>
-    <Value>0.169417813</Value>
+    <Value>4.121479034</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO HEIGHT SCALE</Name>
-    <Value>0.159349307</Value>
+    <Value>4.121479034</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO DEPTH SCALE</Name>
-    <Value>0.153116435</Value>
+    <Value>4.121479034</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -31,12 +36,12 @@
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO-LEFT SHLDER CONNECT X</Name>
-    <Value>10.273969650</Value>
+    <Value>23.943662643</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO-LEFT SHLDER CONNECT Y</Name>
-    <Value>-28.082191467</Value>
+    <Value>28.169012070</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -46,12 +51,12 @@
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO-RIGHT SHLDER CONNECT X</Name>
-    <Value>10.273969650</Value>
+    <Value>23.943662643</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO-RIGHT SHLDER CONNECT Y</Name>
-    <Value>28.082191467</Value>
+    <Value>-28.873241425</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -60,23 +65,8 @@
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>TORSO-ABDOMEN CONNECT X</Name>
-    <Value>45.205474854</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>TORSO-ABDOMEN CONNECT Y</Name>
-    <Value>0.000000000</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>TORSO-ABDOMEN CONNECT Z</Name>
-    <Value>7.534241676</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
     <Name>TORSO-HEAD CONNECT X</Name>
-    <Value>-23.287672043</Value>
+    <Value>57.746482849</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -91,5 +81,20 @@
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO CONNECT DIST</Name>
-    <Value>17.356164932</Value>
+    <Value>17.816900253</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO MESH VERT OFFSET X</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO MESH VERT OFFSET Y</Name>
+    <Value>-9.154928207</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>TORSO MESH VERT OFFSET Z</Name>
+    <Value>0.000000000</Value>
 </Widget>

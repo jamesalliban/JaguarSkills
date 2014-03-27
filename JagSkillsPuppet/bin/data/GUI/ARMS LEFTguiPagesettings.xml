@@ -1,4 +1,9 @@
 <Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE VISIBLE</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
     <Kind>4</Kind>
     <Name>UPPER ARM WIDTH SCALE</Name>
     <Value>0.065376714</Value>
@@ -47,6 +52,11 @@
     <Kind>4</Kind>
     <Name>UPPER-FOREARM CONNECT DIST</Name>
     <Value>39.989723206</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE VISIBLE F</Name>
+    <Value>1</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>

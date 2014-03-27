@@ -6,20 +6,20 @@
 //
 //
 
-#include "Hand.h"
+#include "HandR.h"
 
-void Hand::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, ofShader *_shader)
+void HandR::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, ofShader *_shader)
 {
     BodyPart::setup(modelPath, _texture, _bumpMap, _shader);
 }
 
-void Hand::drawFaces()
+void HandR::drawFaces()
 {
     BodyPart::drawFaces();
 }
 
 
-void Hand::drawWireframe()
+void HandR::drawWireframe()
 {
     BodyPart::drawWireframe();
 }

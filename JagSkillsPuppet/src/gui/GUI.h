@@ -25,7 +25,8 @@ public:
     void addModelGlobalGUI();
     void addModelTorsoGUI();
     void addModelHeadGUI();
-    void addModelAbdomenAndLegsGUI();
+    void addModelAbdomenGUI();
+    void addModelLegsGUI();
     void addModelArmsLGUI();
     void addModelArmsRGUI();
     void addModelHandsGUI();

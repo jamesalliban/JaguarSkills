@@ -1,5 +1,5 @@
 //
-//  Forearm.h
+//  HandL.h
 //  JagSkills
 //
 //  Created by James Alliban's MBP on 22/03/2014.
@@ -11,11 +11,10 @@
 #include "ofMain.h"
 #include "BodyPart.h"
 
-class Forearm : public BodyPart
+class HandL : public BodyPart
 {
 public:
     virtual void setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, ofShader *_shader);
     virtual void drawFaces();
     virtual void drawWireframe();
-    
 };

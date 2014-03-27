@@ -33,7 +33,8 @@ public:
     static float shinyness;
     static float shadowIntensity;
     static bool isBumpMapActive;
-    static float bumpMapStrength;
+	static float bumpMapStrength;
+	static bool isShadingActive;
     
     ofxAssimpModelLoader model;
     
@@ -53,5 +54,10 @@ public:
     vector<ofVec3f> connectingPointsAbsolute;
     ofVec3f *originPoint;
     float distToNextPoint;
-    
+
+	ofMesh mesh;
+    ofVec3f meshVertsOffset;
+	bool isUseOfMesh;
+
+	bool isVisible;
 };

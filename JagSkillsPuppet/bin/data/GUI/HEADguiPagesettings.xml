@@ -1,4 +1,9 @@
 <Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE VISIBLE</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
     <Kind>4</Kind>
     <Name>HEAD WIDTH SCALE</Name>
     <Value>0.055308219</Value>

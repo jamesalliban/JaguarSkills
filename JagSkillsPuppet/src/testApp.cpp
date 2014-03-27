@@ -1,13 +1,16 @@
 #include "testApp.h"
 
 // TODO:
-// - Get the app working with the PC and Kinect.
 // - Smooth skeleton data.
+// - - Fix gimbal lock on left arm/hand by flipping the mesh by 180 degrees.
+// - - Fix head - Only use x rotation from skel data. Add some ambient y rotations.
+// - - Fix hands - rotate them to face down when over the decks.
+// - - Rotate torso when shoulders rotate. 
+// - - Rotate legs when hips rotate. 
 // - Add constraints to make sure limbs\head don't bend unnaturally.
 // - Ensure hand rotation looks good (hands down over decks).
 // - Add animated facial expressions - - cz, how are you getting on with these?
 // - Add configurable camera angles.
-// - Add decks.
 // - Change background to green and remove the anti-aliasing - ready for greenscreen keying.
 
 
@@ -21,8 +24,11 @@ void testApp::update()
 {
 	// ofxKinectNui bollocks workaround
 	kinectManager.jointPosOffset = jagSkillsApp.jointPosOffset;
+	kinectManager.jointScale = jagSkillsApp.jointScale;
 	kinectManager.skeletonRotDegrees = jagSkillsApp.skeletonRotDegrees;
 	kinectManager.skeletonZReductionScale = jagSkillsApp.skeletonZReductionScale;
+	kinectManager.skeletonSmoothing = jagSkillsApp.skeletonSmoothing;
+
 
 	//if (ofGetFrameNum() == 10)
  //       kinectManager.kinectRecorder.startPlayback("images/rec/back_and_forth_4p_4k.png");
@@ -30,7 +36,7 @@ void testApp::update()
     if (!jagSkillsApp.isPaused) kinectManager.update();
     
     if (kinectManager.skeletons.size() > 0)
-		jagSkillsApp.scene.update(kinectManager.skeletons[0]); //kinectManager.getActiveSkeleton());
+		jagSkillsApp.scene.update(kinectManager.smoothSkeletons[0]); //kinectManager.getActiveSkeleton());
 }
 
 void testApp::draw()
@@ -39,7 +45,7 @@ void testApp::draw()
     kinectManager.draw();
     
     if (kinectManager.skeletons.size() > 0)
-        jagSkillsApp.draw(kinectManager.skeletons[0]);
+        jagSkillsApp.draw(kinectManager.smoothSkeletons[0]);
 }
 
 void testApp::keyPressed(int key)
@@ -81,7 +87,6 @@ void testApp::mousePressed(int x, int y, int button){
 }
 
 void testApp::mouseReleased(int x, int y, int button){
-
 }
 
 void testApp::windowResized(int w, int h){
