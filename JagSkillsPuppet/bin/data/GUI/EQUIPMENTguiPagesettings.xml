@@ -1,7 +1,7 @@
 <Widget>
     <Kind>2</Kind>
     <Name>TOGGLE EQUIPMENT VISIBLE</Name>
-    <Value>0</Value>
+    <Value>1</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -31,7 +31,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>DECKS ROT Z</Name>
-    <Value>0.221829414</Value>
+    <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -41,12 +41,12 @@
 <Widget>
     <Kind>4</Kind>
     <Name>DECKS 1 POS Y</Name>
-    <Value>-18.309856415</Value>
+    <Value>-42.253517151</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>DECKS 1 POS Z</Name>
-    <Value>38.028167725</Value>
+    <Value>160.563369751</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -56,12 +56,12 @@
 <Widget>
     <Kind>4</Kind>
     <Name>DECKS 2 POS Y</Name>
-    <Value>-19.718313217</Value>
+    <Value>-40.845073700</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>DECKS 2 POS Z</Name>
-    <Value>38.028167725</Value>
+    <Value>163.380294800</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -71,7 +71,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>MIXER SCALE Y</Name>
-    <Value>0.098591551</Value>
+    <Value>0.095070422</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -101,10 +101,10 @@
 <Widget>
     <Kind>4</Kind>
     <Name>MIXER POS Y</Name>
-    <Value>-8.450698853</Value>
+    <Value>-28.169012070</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>MIXER POS Z</Name>
-    <Value>36.619712830</Value>
+    <Value>159.154937744</Value>
 </Widget>

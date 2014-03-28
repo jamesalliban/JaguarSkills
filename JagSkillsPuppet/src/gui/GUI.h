@@ -22,6 +22,7 @@ public:
     void addAppGUI();
     void addSceneGUI();
     void addSkeletonGUI();
+	void addCameraAnglesGUI();
     void addModelGlobalGUI();
     void addModelTorsoGUI();
     void addModelHeadGUI();
@@ -34,7 +35,6 @@ public:
     void addModelHandsGUI();
     void addModelEquipmentGUI();
     void addShadingGUI();
-    void addBackgroundGUI();
     void addGUIDesignGUI();
     
     void guiModelGlobalGUIEvent(ofxUIEventArgs &e);

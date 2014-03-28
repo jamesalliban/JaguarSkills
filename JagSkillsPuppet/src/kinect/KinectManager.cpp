@@ -58,16 +58,16 @@ void KinectManager::setup()
 	kinect.setLabelDrawer(labelDraw_);
 	kinect.setSkeletonDrawer(skeletonDraw_);
 	
-	framesSinceSkeletonLost = 0;
-	for(int i = 0; i < 1; i++)
-	{
-		SkeletonDataObject skelData;
-		for (int j = 0; j < ofxKinectNui::SKELETON_POSITION_COUNT; j++)
-		{
-			skelData.skeletonPositions.push_back(ofVec3f(0, 0, 0));
-		}
-		smoothSkeletons.push_back(skelData);
-	}
+	//framesSinceSkeletonLost = 0;
+	//for(int i = 0; i < 1; i++)
+	//{
+	//	SkeletonDataObject skelData;
+	//	for (int j = 0; j < ofxKinectNui::SKELETON_POSITION_COUNT; j++)
+	//	{
+	//		skelData.skeletonPositions.push_back(ofVec3f(0, 0, 0));
+	//	}
+	//	smoothSkeletons.push_back(skelData);
+	//}
 }
 
 
@@ -77,27 +77,45 @@ void KinectManager::update()
 	if (isKinectAttached)
 		kinectSource->update();
 
-	ofPoint* skelPoints[ofxKinectNui::SKELETON_COUNT];
+	ofPoint* skelPoints[ofxKinectNui::SKELETON_COUNT]; ///////////////////////////////////////////////////////////////////////////
 		
 	int skeletonCount = kinect.getSkeletonPoints(skelPoints);
 
+	printf("skeletonCount = %i\n", skeletonCount);
 
+	//if (skeletonCount == 2) skeletonCount = 1; 
+
+	 
 	if(kinect.isFoundSkeleton())
 	{
 		framesSinceSkeletonLost = 0;
+		if (skeletons.size() == 0)
+		{
+			for(int i = 0; i < 2; i++)
+			{
+				SkeletonDataObject skelData;
+				for (int j = 0; j < ofxKinectNui::SKELETON_POSITION_COUNT; j++)
+					skelData.skeletonPositions.push_back(ofVec3f(0, 0, 0));
+				
+				smoothSkeletons.push_back(skelData);
+			}
+		}
 		skeletons.clear();
 		for(int i = 0; i < ofxKinectNui::SKELETON_COUNT; i++)
 		{
 			if(kinect.isTrackedSkeleton(i))
 			{
-				SkeletonDataObject skelData;
-				for(int j = 0; j < ofxKinectNui::SKELETON_POSITION_COUNT; j++)
-				{
-					ofPoint joint = skelPoints[i][j];
-					skelData.skeletonPositions.push_back(joint);
+				//if (skelPoints[i][0].z > 0)
+				//{
+					SkeletonDataObject skelData;
+					for(int j = 0; j < ofxKinectNui::SKELETON_POSITION_COUNT; j++)
+					{
+						ofPoint joint = skelPoints[i][j];
+						skelData.skeletonPositions.push_back(joint);
+					}
+					skeletons.push_back(skelData);
 				}
-				skeletons.push_back(skelData);
-			}
+			//}
 		}
 		formatSkeletonData();
 	}
@@ -106,6 +124,7 @@ void KinectManager::update()
 		if (++framesSinceSkeletonLost > 2)
 		{
 			skeletons.clear();
+			smoothSkeletons.clear();
 		}
 	}
 
@@ -116,6 +135,8 @@ void KinectManager::update()
         skeletons = kinectRecorder.getRecordedSkeletons();
         formatSkeletonData();
     }
+
+	//return;
 
 	// smoothing
 	if(kinect.isFoundSkeleton())
@@ -157,35 +178,7 @@ void KinectManager::draw()
 	if(bDrawSkeleton)
 	{
 		kinect.drawSkeleton(0, 240, 320, 240);	// draw skeleton images on video images
-	// Draw calibrated image only
 	}
-
-
-	//stringstream kinectReport;
-	//if(bPlugged && !kinect.isOpened() && !bPlayback){
-	//	ofSetColor(0, 255, 0);
-	//	kinectReport << "Kinect is plugged..." << endl;
-	//	ofDrawBitmapString(kinectReport.str(), 200, 300);
-	//}else if(!bPlugged){
-	//	ofSetColor(255, 0, 0);
-	//	kinectReport << "Kinect is unplugged..." << endl;
-	//	ofDrawBitmapString(kinectReport.str(), 200, 300);
-	//}
-
-	//// draw instructions
-	//ofSetColor(255, 255, 255);
-	//stringstream reportStream;
-	//reportStream << "fps: " << ofGetFrameRate() << "  Kinect Nearmode: " << kinect.isNearmode() << endl
-	//			 << "press 'c' to close the stream and 'o' to open it again, stream is: " << kinect.isOpened() << endl
-	//			 << "press UP and DOWN to change the tilt angle: " << angle << " degrees" << endl
-	//			 << "press LEFT and RIGHT to change the far clipping distance: " << farClipping << " mm" << endl
-	//			 << "press '+' and '-' to change the near clipping distance: " << nearClipping << " mm" << endl
-	//			 << "press 'r' to record and 'p' to playback, record is: " << bRecord << ", playback is: " << bPlayback << endl
-	//			 << "press 'v' to show video only: " << bDrawVideo << ",      press 'd' to show depth + users label only: " << bDrawDepthLabel << endl
-	//			 << "press 's' to show skeleton only: " << bDrawSkeleton << ",   press 'q' to show point cloud sample: " << bDrawCalibratedTexture;
-	//ofDrawBitmapString(reportStream.str(), 20, 648);
-
-
 }
 
 
@@ -230,47 +223,6 @@ void KinectManager::formatSkeletonData()
 			joint->x *= jointScale;
             joint->y *= jointScale;
             joint->z *= jointScale;
-
-//
-//            if (isSkelScaleFromZ)
-//            {
-//                //capture the hip vector then fix the z scaling bug
-//                if (i == 0) hipOffset = ofVec3f(jointPositions[CELL_HIP_CENTRE]);
-//                performZScaleFix(&jointPositions[i]);
-//            }
-//
-//            if (isZSpreadOffset)
-//            {
-//                joint->z = ofMap(joint->z, zSpreadInputMin, zSpreadInputMax, zSpreadOutputMin, zSpreadOutputMax);
-//            }
-//
-//            //joint->x += (UserManager::xSpreadRangeNormalMax[clientID]);// * userMan->skeletonScale[clientID]); // * 0.5;
-//
-//            if (isXSpreadOffset)
-//            {
-//                float zPosNorm = ofMap(joint->z, zSpreadOutputMin, zSpreadOutputMax, 0, 1);
-//                float xPosOffset = (userMan->skeletonPosOffsetX[clientID]) * userMan->skeletonScale[clientID];
-//                float xPosNorm = ofMap(joint->x, UserManager::xSpreadRangeNormalMin[clientID] + xPosOffset, UserManager::xSpreadRangeNormalMax[clientID] + xPosOffset, 0, 1);
-//                float frontXpos = ofMap(xPosNorm, 0, 1, UserManager::xFrontSkewedMin[clientID], UserManager::xFrontSkewedMax[clientID]);
-//                float backXpos = ofMap(xPosNorm, 0, 1, UserManager::xBackSkewedMin[clientID], UserManager::xBackSkewedMax[clientID]);
-//
-//                if (clientID == 0 && i == CELL_HIP_CENTRE) printf("zPosNorm:%f, xPosNorm:%f, xPosOffset:%f, frontXpos:%f, backXPos:%f \n", zPosNorm, xPosNorm, xPosOffset, frontXpos, backXpos);
-//
-//                if (i == CELL_HIP_CENTRE)
-//                {
-//                    float hipCentreX = joint->x;
-//                    float newHipCentreX = ofLerp(frontXpos, backXpos, zPosNorm);
-//                    hipXSpreadOffset = newHipCentreX - hipCentreX;
-//                    joint->x = newHipCentreX;
-//                    joint->x += userMan->skeletonPosOffsetX[clientID] * userMan->skeletonScale[clientID];
-//                }
-//                else
-//                {
-//                    
-//                    joint->x += hipXSpreadOffset;
-//                    joint->x += userMan->skeletonPosOffsetX[clientID] * userMan->skeletonScale[clientID];
-//                }
-//            }
         }
     }
 }

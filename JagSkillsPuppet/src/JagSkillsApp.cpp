@@ -29,11 +29,31 @@ void JagSkillsApp::update()
     
     scene.setMouseCamEnabled(gui.isMouseOver());
     ofSetFrameRate(frameRate); 
+
+	
+	// check for waiting messages
+	while(receiver.hasWaitingMessages()){
+		// get the next message
+		ofxOscMessage m;
+		receiver.getNextMessage(&m);
+
+		// check for mouse moved message
+		if (m.getAddress() == "/camera_position/1")
+			scene.setCamerangle(1);
+		else if (m.getAddress() == "/camera_position/2")
+			scene.setCamerangle(2);
+		else if (m.getAddress() == "/camera_position/3")
+			scene.setCamerangle(3);
+		else if (m.getAddress() == "/camera_position/4")
+			scene.setCamerangle(4);
+		else if (m.getAddress() == "/camera_position/5")
+			scene.setCamerangle(5);
+	}
 }
 
-void JagSkillsApp::draw(SkeletonDataObject skeleton)
+void JagSkillsApp::draw(vector<SkeletonDataObject> skeletons)
 {
-	ofBackground(40);
+	ofBackground(backgroundR, backgroundG, backgroundB);
     
-    scene.draw(skeleton);
+    scene.draw(skeletons);
 }

@@ -19,6 +19,7 @@ void GUI::setup(string _guiPath)
     addKeyGUI();
     addAppGUI();
     addSceneGUI();
+	addCameraAnglesGUI();
     addSkeletonGUI();
     addModelGlobalGUI();
     addModelLegsGUI();
@@ -32,7 +33,6 @@ void GUI::setup(string _guiPath)
     addModelHandsGUI();
 	addModelEquipmentGUI();
     addShadingGUI();
-    addBackgroundGUI();
     addGUIDesignGUI();
     
     setGUIColour();
@@ -79,25 +79,77 @@ void GUI::addSceneGUI()
     gui->addLabel("CAMERA");
     gui->addToggle("MOUSE CONTROLS CAMERA", &app->scene.isMouseCam, toggleSize, toggleSize);
     gui->addSpacer(length, 1);
-    gui->addSlider("CAMERA POS X", -300, 300, &app->scene.cameraPosition.x, length, dim);
-    gui->addSlider("CAMERA POS Y", -300, 300, &app->scene.cameraPosition.y, length, dim);
-    gui->addSlider("CAMERA POS Z", -500, 500, &app->scene.cameraPosition.z, length, dim);
+	gui->addSlider("CAMERA POS 0 X", -300, 300, &app->scene.camPositions[0].x, length, dim);
+    gui->addSlider("CAMERA POS 0 Y", -300, 300, &app->scene.camPositions[0].y, length, dim);
+    gui->addSlider("CAMERA POS 0 Z", -500, 500, &app->scene.camPositions[0].z, length, dim);
     gui->addSpacer(length, 1);
-    gui->addSlider("CAMERA TARGET POS X", -300, 300, &app->scene.cameraTargetPosition.x, length, dim);
-    gui->addSlider("CAMERA TARGET POS Y", -300, 300, &app->scene.cameraTargetPosition.y, length, dim);
-    gui->addSlider("CAMERA TARGET POS Z", -500, 500, &app->scene.cameraTargetPosition.z, length, dim);
+	gui->addSlider("CAMERA TARGET 0 POS X", -300, 300, &app->scene.camTartetsPositions[0].x, length, dim);
+    gui->addSlider("CAMERA TARGET 0 POS Y", -300, 300, &app->scene.camTartetsPositions[0].y, length, dim);
+    gui->addSlider("CAMERA TARGET 0 POS Z", -500, 500, &app->scene.camTartetsPositions[0].z, length, dim);
     gui->addSpacer(length, 1);
     gui->addLabel("LIGHTING");
     gui->addSlider("LIGHT POS X", -300, 300, &app->scene.lightPosition.x, length, dim);
     gui->addSlider("LIGHT pos Y", -300, 300, &app->scene.lightPosition.y, length, dim);
     gui->addSlider("LIGHT pos Z", -500, 500, &app->scene.lightPosition.z, length, dim);
     
-    
+    gui->addSpacer(length, 1);
+    gui->addLabel("BG");
+	gui->addSlider("BACKGROUND R", 0, 255, &app->backgroundR, length, dim);
+	gui->addSlider("BACKGROUND G", 0, 255, &app->backgroundG, length, dim);
+	gui->addSlider("BACKGROUND B", 0, 255, &app->backgroundB, length, dim);
     // grid
+	
+    gui->addSpacer(length, 1);
+    gui->addToggle("TOGGLE GRID VISIBLE", &app->scene.isGridVisible, toggleSize, toggleSize);
+    gui->addToggle("TOGGLE LINE SKEL VISIBLE", &app->scene.isDebugSkeletonVIsible, toggleSize, toggleSize);
+	
     
     finaliseCanvas(gui);
 }
 
+
+void GUI::addCameraAnglesGUI()
+{
+    string title = "CAMERA ANGLES";
+    ofxUICanvas* gui = getNewGUI(title);
+    
+	gui->addSlider("CAMERA POS 1 X", -300, 300, &app->scene.camPositions[1].x, length, dim);
+    gui->addSlider("CAMERA POS 1 Y", -300, 300, &app->scene.camPositions[1].y, length, dim);
+    gui->addSlider("CAMERA POS 1 Z", -500, 500, &app->scene.camPositions[1].z, length, dim);
+    gui->addSpacer(length, 1);
+	gui->addSlider("CAMERA TARGET 1 POS X", -300, 300, &app->scene.camTartetsPositions[1].x, length, dim);
+    gui->addSlider("CAMERA TARGET 1 POS Y", -300, 300, &app->scene.camTartetsPositions[1].y, length, dim);
+    gui->addSlider("CAMERA TARGET 1 POS Z", -500, 500, &app->scene.camTartetsPositions[1].z, length, dim);
+
+    gui->addSpacer(length, 1);
+	gui->addSlider("CAMERA POS 2 X", -300, 300, &app->scene.camPositions[2].x, length, dim);
+    gui->addSlider("CAMERA POS 2 Y", -300, 300, &app->scene.camPositions[2].y, length, dim);
+    gui->addSlider("CAMERA POS 2 Z", -500, 500, &app->scene.camPositions[2].z, length, dim);
+    gui->addSpacer(length, 1);
+	gui->addSlider("CAMERA TARGET 2 POS X", -300, 300, &app->scene.camTartetsPositions[2].x, length, dim);
+    gui->addSlider("CAMERA TARGET 2 POS Y", -300, 300, &app->scene.camTartetsPositions[2].y, length, dim);
+    gui->addSlider("CAMERA TARGET 2 POS Z", -500, 500, &app->scene.camTartetsPositions[2].z, length, dim);
+    
+	gui->addSpacer(length, 1);
+	gui->addSlider("CAMERA POS 3 X", -300, 300, &app->scene.camPositions[3].x, length, dim);
+    gui->addSlider("CAMERA POS 3 Y", -300, 300, &app->scene.camPositions[3].y, length, dim);
+    gui->addSlider("CAMERA POS 3 Z", -500, 500, &app->scene.camPositions[3].z, length, dim);
+    gui->addSpacer(length, 1);
+	gui->addSlider("CAMERA TARGET 3 POS X", -300, 300, &app->scene.camTartetsPositions[3].x, length, dim);
+    gui->addSlider("CAMERA TARGET 3 POS Y", -300, 300, &app->scene.camTartetsPositions[3].y, length, dim);
+    gui->addSlider("CAMERA TARGET 3 POS Z", -500, 500, &app->scene.camTartetsPositions[3].z, length, dim);
+    
+	gui->addSpacer(length, 1);
+	gui->addSlider("CAMERA POS 4 X", -300, 300, &app->scene.camPositions[4].x, length, dim);
+    gui->addSlider("CAMERA POS 4 Y", -300, 300, &app->scene.camPositions[4].y, length, dim);
+    gui->addSlider("CAMERA POS 4 Z", -500, 500, &app->scene.camPositions[4].z, length, dim);
+    gui->addSpacer(length, 1);
+	gui->addSlider("CAMERA TARGET 4 POS X", -300, 300, &app->scene.camTartetsPositions[4].x, length, dim);
+    gui->addSlider("CAMERA TARGET 4 POS Y", -300, 300, &app->scene.camTartetsPositions[4].y, length, dim);
+    gui->addSlider("CAMERA TARGET 4 POS Z", -500, 500, &app->scene.camTartetsPositions[4].z, length, dim);
+
+    finaliseCanvas(gui);
+}
 
 
 void GUI::addSkeletonGUI()
@@ -124,7 +176,6 @@ void GUI::addSkeletonGUI()
 	gui->addSlider("SCALE", 0.001, 2, &app->jointScale, length, dim);
 	gui->addSlider("JOINT SMOOTHING", 0.001, 1, &app->skeletonSmoothing, length, dim);
 	
-
     finaliseCanvas(gui);
 }
 
@@ -428,9 +479,9 @@ void GUI::addModelForeArmRGUI()
     gui->addSlider("FOREARM HEIGHT SCALE", 0.01, 5, &app->scene.forearmR.scaleH, length, dim)->setLabelPrecision(4);
     gui->addSlider("FOREARM DEPTH SCALE", 0.01, 5, &app->scene.forearmR.scaleD, length, dim)->setLabelPrecision(4);
 #else
-    gui->addSlider("FOREARM WIDTH SCALE", 0.01, 5, &app->scene.forearmR.scaleW, length, dim);
-    gui->addSlider("FOREARM HEIGHT SCALE", 0.01, 5, &app->scene.forearmR.scaleH, length, dim);
-    gui->addSlider("FOREARM DEPTH SCALE", 0.01, 5, &app->scene.forearmR.scaleD, length, dim);
+    gui->addSlider("FOREARM WIDTH SCALE", 0.01, 0.5, &app->scene.forearmR.scaleW, length, dim);
+    gui->addSlider("FOREARM HEIGHT SCALE", 0.01, 0.5, &app->scene.forearmR.scaleH, length, dim);
+    gui->addSlider("FOREARM DEPTH SCALE", 0.01, 0.5, &app->scene.forearmR.scaleD, length, dim);
 #endif
     gui->addSpacer(length, 1);
     gui->addSlider("FOREARM ROT X", -180, 180, &app->scene.forearmR.rotX, length, dim);
@@ -557,19 +608,6 @@ void GUI::addShadingGUI()
     gui->addSpacer(spacerW, spacerH);
     gui->addToggle("TOGGLE BUMP MAP", &BodyPart::isBumpMapActive, toggleSize, toggleSize);
     gui->addSlider("BUMP MAP STRENGTH", 0, 10, &BodyPart::bumpMapStrength, length, dim);
-    
-    finaliseCanvas(gui);
-}
-
-
-void GUI::addBackgroundGUI()
-{
-    string title = "BACKGROUND";
-    ofxUICanvas* gui = getNewGUI(title);
-    
-    gui->addSlider("BG RED", 0, 255, &app->scene.cameraTargetPosition.x, length, dim);
-    gui->addSlider("BG GREEN", 0, 255, &app->scene.cameraTargetPosition.y, length, dim);
-    gui->addSlider("BG BLUE", 0, 255, &app->scene.cameraTargetPosition.z, length, dim);
     
     finaliseCanvas(gui);
 }

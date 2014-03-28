@@ -4,13 +4,14 @@
 #include "ofMain.h"
 #include "Scene.h"
 #include "GUI.h"
+#include "ofxOsc.h"
 
 class JagSkillsApp {
 public:
 
 	void setup();
 	void update();
-	void draw(SkeletonDataObject skeleton);
+	void draw(vector<SkeletonDataObject> skeletons);
 		
     Scene scene;
     GUI gui;
@@ -27,4 +28,9 @@ public:
     float skeletonZReductionScale;
     float skeletonRotDegrees;
 	float skeletonSmoothing;
+
+	float backgroundR, backgroundG, backgroundB;
+
+	// networking
+	ofxOscReceiver receiver;
 };

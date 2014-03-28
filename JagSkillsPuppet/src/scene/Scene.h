@@ -28,13 +28,20 @@ class Scene
 {
 public:
     void setup();
-    void update(SkeletonDataObject skeleton);
-    void draw(SkeletonDataObject skeleton);
+    void update(vector<SkeletonDataObject> skeletons);
+    void draw(vector<SkeletonDataObject> skeletons);
     void drawLineSkeleton(SkeletonDataObject skeleton);
     void setMouseCamEnabled(bool isGUIMouseOver);
     void loadShader();
+	void setCameraProps();
+	void setCamerangle(int camIndex);
     
     ofEasyCam easyCam;
+    ofCamera cam;
+	vector<ofVec3f> camPositions;
+	vector<ofVec3f> camTartetsPositions;
+	int currentCameraIndex;
+
     ofLight light;
     ofRectangle viewport;
     
@@ -81,4 +88,7 @@ public:
     bool isDrawFaces;
 
 	bool isEquipmentVisible;
+
+	bool isGridVisible;
+	bool isDebugSkeletonVIsible;
 };

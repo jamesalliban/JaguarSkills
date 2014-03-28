@@ -1,36 +1,36 @@
 <Widget>
     <Kind>2</Kind>
     <Name>MOUSE CONTROLS CAMERA</Name>
-    <Value>1</Value>
+    <Value>0</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>CAMERA POS X</Name>
+    <Name>CAMERA POS 0 X</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>CAMERA POS Y</Name>
+    <Name>CAMERA POS 0 Y</Name>
+    <Value>88.732406616</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>CAMERA POS 0 Z</Name>
+    <Value>225.352111816</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>CAMERA TARGET 0 POS X</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>CAMERA POS Z</Name>
+    <Name>CAMERA TARGET 0 POS Y</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>CAMERA TARGET POS X</Name>
-    <Value>0.000000000</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>CAMERA TARGET POS Y</Name>
-    <Value>0.000000000</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>CAMERA TARGET POS Z</Name>
+    <Name>CAMERA TARGET 0 POS Z</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
@@ -47,4 +47,29 @@
     <Kind>4</Kind>
     <Name>LIGHT pos Z</Name>
     <Value>500.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>BACKGROUND R</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>BACKGROUND G</Name>
+    <Value>255.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>BACKGROUND B</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE GRID VISIBLE</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE LINE SKEL VISIBLE</Name>
+    <Value>1</Value>
 </Widget>

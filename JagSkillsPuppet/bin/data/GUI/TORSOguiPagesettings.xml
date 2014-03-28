@@ -71,7 +71,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO-HEAD CONNECT X</Name>
-    <Value>57.746482849</Value>
+    <Value>55.633808136</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -81,7 +81,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO-HEAD CONNECT Z</Name>
-    <Value>11.643838882</Value>
+    <Value>11.267602921</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -96,7 +96,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO MESH VERT OFFSET Y</Name>
-    <Value>-8.732394218</Value>
+    <Value>-8.591548920</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
