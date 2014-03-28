@@ -2,16 +2,15 @@
 
 // TODO:
 // - Smooth skeleton data.
-// - - Fix gimbal lock on left arm/hand by flipping the mesh by 180 degrees.
 // - - Fix head - Only use x rotation from skel data. Add some ambient y rotations.
-// - - Fix hands - rotate them to face down when over the decks.
 // - - Rotate torso when shoulders rotate. 
+// - - Fix hands - rotate them to face down when over the decks.
+// - - Reduce gimbal lock by not allowing forearm to ben inward too much.
 // - - Rotate legs when hips rotate. 
-// - Add constraints to make sure limbs\head don't bend unnaturally.
-// - Ensure hand rotation looks good (hands down over decks).
-// - Add animated facial expressions - - cz, how are you getting on with these?
-// - Add configurable camera angles.
+// - Add configurable camera angles - OSC and MIDI.
 // - Change background to green and remove the anti-aliasing - ready for greenscreen keying.
+//
+// - Add animated facial expressions - - cz, how are you getting on with these?
 
 
 void testApp::setup()

@@ -86,13 +86,17 @@ void Scene::update(SkeletonDataObject skeleton)
 	abdomen.update(skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE], skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].getInterpolated(skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE], 0.5));
     
     torso.update(skeleton.skeletonPositions[KINECT_SDK_HIP_CENTRE], skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE]);
-    head.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE], skeleton.skeletonPositions[KINECT_SDK_HEAD]);
+
+	ofVec3f headTarget = ofVec3f(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].x,
+		skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE].y + 20,
+		skeleton.skeletonPositions[KINECT_SDK_HEAD].z);
+	head.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE], skeleton.skeletonPositions[KINECT_SDK_HEAD]);
 
     
-    upperArmL.update(skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT], skeleton.skeletonPositions[KINECT_SDK_SHOULDER_LEFT]);
+    upperArmL.update(skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT], skeleton.skeletonPositions[KINECT_SDK_SHOULDER_LEFT]); // target and pos swapped for left arm/hand to fix gimbal lock issue
     upperArmR.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_RIGHT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_RIGHT]);
     
-    forearmL.update(skeleton.skeletonPositions[KINECT_SDK_WRIST_LEFT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT]);
+    forearmL.update(skeleton.skeletonPositions[KINECT_SDK_WRIST_LEFT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT]); // target and pos swapped for left arm/hand to fix gimbal lock issue
     forearmR.update(skeleton.skeletonPositions[KINECT_SDK_ELBOW_RIGHT], skeleton.skeletonPositions[KINECT_SDK_WRIST_RIGHT]);
     
     handL.update(skeleton.skeletonPositions[KINECT_SDK_WRIST_LEFT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT]); // target and pos swapped for left arm/hand to fix gimbal lock issue

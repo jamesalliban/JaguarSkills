@@ -229,6 +229,11 @@ void GUI::addModelHeadGUI()
     gui->addSlider("HEAD ROT Y", -180, 180, &app->scene.head.rotY, length, dim);
     gui->addSlider("HEAD ROT Z", -180, 180, &app->scene.head.rotZ, length, dim);
     
+	gui->addSpacer(length, 1);
+    gui->addRangeSlider("X ROT FROM Y DIR IN", 5, 30, &app->scene.head.rotXNodOffsetAngleInMin, &app->scene.head.rotXNodOffsetAngleInMax, length, dim);
+    gui->addRangeSlider("X ROT FROM Y DIR OUT", 5, 30, &app->scene.head.rotXNodOffsetAngleOutMin, &app->scene.head.rotXNodOffsetAngleOutMax, length, dim);
+
+
     finaliseCanvas(gui);
 }
 

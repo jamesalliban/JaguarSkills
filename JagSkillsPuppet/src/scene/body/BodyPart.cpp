@@ -48,13 +48,13 @@ void BodyPart::update(ofVec3f _skelJointPos, ofVec3f _skelJointTarget)
 				vert->x -= meshVertsOffset.x;
 				vert->y -= meshVertsOffset.y;
 				vert->z -= meshVertsOffset.z;
-				//vert->rotate(meshVertsRot.x, ofVec3f(1, 0, 0));
+				vert->rotate(meshVertsRot.x, ofVec3f(1, 0, 0));
 				vert->rotate(meshVertsRot.y, ofVec3f(0, 1, 0));
 				vert->rotate(meshVertsRot.z, ofVec3f(0, 0, 1));
 				mesh.setVertex(j, *vert);
 				//
 				ofVec3f *norm = &mesh.getNormal(j);
-				//norm->rotate(meshVertsRot.x, ofVec3f(1, 0, 0));
+				norm->rotate(meshVertsRot.x, ofVec3f(1, 0, 0));
 				norm->rotate(meshVertsRot.y, ofVec3f(0, 1, 0));
 				norm->rotate(meshVertsRot.z, ofVec3f(0, 0, 1));
 				mesh.setNormal(j, *norm);
@@ -91,8 +91,6 @@ void BodyPart::drawFaces()
     ofTranslate(*originPoint);
     // rotate in direction of target
     ofRotate(qangle, qaxis.x, qaxis.y, qaxis.z);
-    
-//    texture->bind();
     
     float ambientArray[4];
     ambientArray[0] = ambient.r;
@@ -159,12 +157,7 @@ void BodyPart::drawWireframe()
     ofTranslate(*originPoint);
     // rotate in direction of target
     ofRotate(qangle, qaxis.x, qaxis.y, qaxis.z);
-    //ofRotate(qangle, 0, qaxis.y, qaxis.z);
-    //ofRotate(qangle, 0, 0, 0);
 
-
-//    texture->bind();
-    
     float ambientArray[4];
     ambientArray[0] = ambient.r;
     ambientArray[1] = ambient.g;
