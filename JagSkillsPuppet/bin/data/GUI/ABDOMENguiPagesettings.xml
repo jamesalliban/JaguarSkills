@@ -4,6 +4,11 @@
     <Value>1</Value>
 </Widget>
 <Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE USE OFMESH</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
     <Kind>4</Kind>
     <Name>ABDOMEN WIDTH SCALE</Name>
     <Value>4.385035038</Value>
@@ -61,7 +66,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>ABDOMEN MESH VERT OFFSET Y</Name>
-    <Value>-5.492958069</Value>
+    <Value>-4.788732529</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>

@@ -12,7 +12,7 @@ void Torso::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, of
 {
     BodyPart::setup(modelPath, _texture, _bumpMap, _shader);
     
-    model.loadModel(modelPath, true);
+   // model.loadModel(modelPath, true);
     
 	//model.setPosition(-200, 0, 0);
 
@@ -54,15 +54,17 @@ void Torso::formatConnections()
         connectingPointsAbsolute[i] += *originPoint; //skelJointPos;
     }
 
-	ofPushStyle();
-    ofSetColor(0, 0, 255, 255);
+	if (isDrawDebug)
+	{
+		ofPushStyle();
+		ofSetColor(0, 0, 255, 255);
 
 #ifdef TARGET_OSX
-    ofDrawSphere(connectingPointsAbsolute[0], 5);
+		ofDrawSphere(connectingPointsAbsolute[0], 5);
 #else
-    ofSphere(connectingPointsAbsolute[0], 5);
+		ofSphere(connectingPointsAbsolute[0], 5);
 #endif
 
-	
-	ofPopStyle();
+		ofPopStyle();
+	}
 }

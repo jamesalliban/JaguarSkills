@@ -80,11 +80,13 @@ void GUIManager::buildSideBarGUI()
 #ifdef TARGET_OSX
     sideBarGui->addImageButton(SIDE_SAVE, "GUI/images/save_image.png", false);
 #else
-	sideBarGui->addWidgetDown(new ofxUILabelButton(false, SIDE_SAVE));
+	sideBarGui->addWidgetRight(new ofxUILabelButton(false, SIDE_SAVE));
 #endif
 
-    sideBarGui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
+    sideBarGui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
     
+    sideBarGui->addSpacer(length * 0.5, 1);
+
     sideBarGui->autoSizeToFitWidgets();
     
 	ofAddListener(sideBarGui->newGUIEvent, this, &GUIManager::sideBarGUIEvent);

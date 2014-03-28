@@ -35,6 +35,8 @@ public:
     static bool isBumpMapActive;
 	static float bumpMapStrength;
 	static bool isShadingActive;
+	static bool isDrawDebug;
+	static bool isDrawModel;
     
     ofxAssimpModelLoader model;
     
@@ -55,8 +57,9 @@ public:
     ofVec3f *originPoint;
     float distToNextPoint;
 
-	ofMesh mesh;
+	vector<ofMesh> meshes;
     ofVec3f meshVertsOffset;
+    ofVec3f meshVertsRot;
 	bool isUseOfMesh;
 
 	bool isVisible;

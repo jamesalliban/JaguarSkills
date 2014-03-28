@@ -26,7 +26,6 @@ void Scene::setup()
     chestBumpImg.loadImage("models/texturesv1/chest_norm_combined_contrast.tif");
     headarmsBumpImg.loadImage("models/texturesv1/headarms_norm.tif");
     pantsBumpImg.loadImage("models/texturesv1/pants_norm.tif");
-    
 
 	
     legs.setup("models/pants_separate.obj", &pantsImg.getTextureReference(), &pantsBumpImg.getTextureReference(), &shader);
@@ -90,13 +89,13 @@ void Scene::update(SkeletonDataObject skeleton)
     head.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_CENTRE], skeleton.skeletonPositions[KINECT_SDK_HEAD]);
 
     
-    upperArmL.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_LEFT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT]);
+    upperArmL.update(skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT], skeleton.skeletonPositions[KINECT_SDK_SHOULDER_LEFT]);
     upperArmR.update(skeleton.skeletonPositions[KINECT_SDK_SHOULDER_RIGHT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_RIGHT]);
     
-    forearmL.update(skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT], skeleton.skeletonPositions[KINECT_SDK_WRIST_LEFT]);
+    forearmL.update(skeleton.skeletonPositions[KINECT_SDK_WRIST_LEFT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT]);
     forearmR.update(skeleton.skeletonPositions[KINECT_SDK_ELBOW_RIGHT], skeleton.skeletonPositions[KINECT_SDK_WRIST_RIGHT]);
     
-    handL.update(skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT], skeleton.skeletonPositions[KINECT_SDK_WRIST_LEFT]);
+    handL.update(skeleton.skeletonPositions[KINECT_SDK_WRIST_LEFT], skeleton.skeletonPositions[KINECT_SDK_ELBOW_LEFT]); // target and pos swapped for left arm/hand to fix gimbal lock issue
     handR.update(skeleton.skeletonPositions[KINECT_SDK_ELBOW_RIGHT], skeleton.skeletonPositions[KINECT_SDK_WRIST_RIGHT]);
 }
 
@@ -151,7 +150,7 @@ void Scene::draw(SkeletonDataObject skeleton)
 
 
     
-    if (isDrawModel)
+    if (BodyPart::isDrawModel)
     {
         if (isDrawFaces)
         {
@@ -206,7 +205,7 @@ void Scene::draw(SkeletonDataObject skeleton)
         }
     }
     
-    if (isDrawDebug)
+    if (BodyPart::isDrawDebug)
     {
         torso.drawDebug(ofColor(255, 0, 255));
         head.drawDebug(ofColor(255, 255, 0));

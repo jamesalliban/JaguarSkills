@@ -12,6 +12,8 @@ void Legs::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, ofS
 {
     BodyPart::setup(modelPath, _texture, _bumpMap, _shader);
 	
+	//isUseOfMesh = true;
+
     // connection to abdomen
     connectingPoints.push_back(ofVec3f(0,0,0));
     connectingPointsAbsolute.push_back(ofVec3f(0, 0, 0));
@@ -45,15 +47,18 @@ void Legs::formatConnections()
     }
 	
 	
-	ofPushStyle();
-    ofSetColor(0, 0, 255, 255);
+	if (isDrawDebug)
+	{
+		ofPushStyle();
+		ofSetColor(0, 0, 255, 255);
 
 #ifdef TARGET_OSX
-    ofDrawSphere(connectingPointsAbsolute[0], 5);
+		ofDrawSphere(connectingPointsAbsolute[0], 5);
 #else
-    ofSphere(connectingPointsAbsolute[0], 5);
+		ofSphere(connectingPointsAbsolute[0], 5);
 #endif
 
-	ofPopStyle();
+		ofPopStyle();
+	}
 }
 

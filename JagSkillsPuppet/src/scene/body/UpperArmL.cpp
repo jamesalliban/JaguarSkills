@@ -12,6 +12,8 @@ void UpperArmL::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap
 {
     BodyPart::setup(modelPath, _texture, _bumpMap, _shader);
     
+	isUseOfMesh = true;
+
     // connection to legs
     connectingPoints.push_back(ofVec3f(0,0,0));
     connectingPointsAbsolute.push_back(ofVec3f(0, 0, 0));

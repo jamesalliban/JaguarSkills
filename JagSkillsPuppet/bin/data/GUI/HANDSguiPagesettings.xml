@@ -4,19 +4,24 @@
     <Value>1</Value>
 </Widget>
 <Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE USE OFMESH L</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
     <Kind>4</Kind>
     <Name>HAND LEFT WIDTH SCALE</Name>
-    <Value>0.046917811</Value>
+    <Value>3.453802824</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>HANDS LEFT HEIGHT SCALE</Name>
-    <Value>0.046917811</Value>
+    <Value>3.506514072</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>HANDS LEFT DEPTH SCALE</Name>
-    <Value>0.046917811</Value>
+    <Value>3.559225321</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -31,7 +36,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>HANDS LEFT ROT Z</Name>
-    <Value>-180.000000000</Value>
+    <Value>180.000000000</Value>
 </Widget>
 <Widget>
     <Kind>2</Kind>
@@ -39,19 +44,24 @@
     <Value>1</Value>
 </Widget>
 <Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE USE OFMESH R</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
     <Kind>4</Kind>
     <Name>HAND RIGHT WIDTH SCALE</Name>
-    <Value>0.046917811</Value>
+    <Value>3.471373320</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>HANDS RIGHT HEIGHT SCALE</Name>
-    <Value>0.046917811</Value>
+    <Value>3.453802824</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>HANDS RIGHT DEPTH SCALE</Name>
-    <Value>0.046917811</Value>
+    <Value>3.418662071</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -66,5 +76,5 @@
 <Widget>
     <Kind>4</Kind>
     <Name>HANDS RIGHT ROT Z</Name>
-    <Value>-180.000000000</Value>
+    <Value>-2.535213232</Value>
 </Widget>

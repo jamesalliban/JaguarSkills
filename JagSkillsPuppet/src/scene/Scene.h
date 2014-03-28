@@ -14,6 +14,7 @@
 #include "Torso.h"
 #include "Abdomen.h"
 #include "Legs.h"
+#include "Head.h"
 #include "UpperArmR.h"
 #include "UpperArmL.h"
 #include "ForearmR.h"
@@ -45,7 +46,7 @@ public:
     Torso torso;
     Abdomen abdomen;
     Legs legs;
-    BodyPart head;
+    Head head;
     UpperArmL upperArmL;
     UpperArmR upperArmR;
     ForearmL forearmL;
@@ -78,8 +79,6 @@ public:
     
     bool isMouseCam;
     bool isDrawFaces;
-    bool isDrawDebug;
-    bool isDrawModel;
 
 	bool isEquipmentVisible;
 };

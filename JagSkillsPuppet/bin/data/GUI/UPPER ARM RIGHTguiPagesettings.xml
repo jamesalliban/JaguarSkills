@@ -6,55 +6,55 @@
 <Widget>
     <Kind>2</Kind>
     <Name>TOGGLE USE OFMESH</Name>
-    <Value>0</Value>
+    <Value>1</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS WIDTH SCALE</Name>
-    <Value>0.091091543</Value>
+    <Name>UPPER ARM WIDTH SCALE</Name>
+    <Value>4.086338043</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS HEIGHT SCALE</Name>
-    <Value>0.091091543</Value>
+    <Name>UPPER ARM HEIGHT SCALE</Name>
+    <Value>4.051197052</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS DEPTH SCALE</Name>
-    <Value>0.091091543</Value>
+    <Name>UPPER ARM DEPTH SCALE</Name>
+    <Value>4.016056538</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS ROT X</Name>
+    <Name>UPPER ARM ROT X</Name>
+    <Value>2.535202503</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER ARM ROT Y</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS ROT Y</Name>
+    <Name>UPPER ARM ROT Z</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS ROT Z</Name>
-    <Value>-90.000000000</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>LEGS-ABDOMEN CONNECT X</Name>
-    <Value>-4.929578304</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>LEGS-ABDOMEN CONNECT Y</Name>
+    <Name>UPPER-FOREARM CONNECT X</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS-ABDOMEN CONNECT Z</Name>
+    <Name>UPPER-FORE SHLDER CONNECT Y</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS DIST TO NEXT PNT</Name>
-    <Value>-53.521133423</Value>
+    <Name>UPPER-FORE SHLDER CONNECT Z</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER-FOREARM CONNECT DIST</Name>
+    <Value>40.845073700</Value>
 </Widget>

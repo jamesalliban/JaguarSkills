@@ -1,6 +1,6 @@
 <Widget>
     <Kind>2</Kind>
-    <Name>TOGGLE VISIBLE</Name>
+    <Name>TOGGLE VISIBLE F</Name>
     <Value>1</Value>
 </Widget>
 <Widget>
@@ -10,51 +10,51 @@
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS WIDTH SCALE</Name>
-    <Value>0.091091543</Value>
+    <Name>FOREARM WIDTH SCALE</Name>
+    <Value>0.053133804</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS HEIGHT SCALE</Name>
-    <Value>0.091091543</Value>
+    <Name>FOREARM HEIGHT SCALE</Name>
+    <Value>0.053630140</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS DEPTH SCALE</Name>
-    <Value>0.091091543</Value>
+    <Name>FOREARM DEPTH SCALE</Name>
+    <Value>0.053630140</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS ROT X</Name>
+    <Name>FOREARM ROT X</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS ROT Y</Name>
+    <Name>FOREARM ROT Y</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS ROT Z</Name>
-    <Value>-90.000000000</Value>
+    <Name>FOREARM ROT Z</Name>
+    <Value>180.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS-ABDOMEN CONNECT X</Name>
-    <Value>-4.929578304</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>LEGS-ABDOMEN CONNECT Y</Name>
+    <Name>FOREARM-HAND CONNECT X</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS-ABDOMEN CONNECT Z</Name>
+    <Name>FOREARM-HAND CONNECT Y</Name>
     <Value>0.000000000</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
-    <Name>LEGS DIST TO NEXT PNT</Name>
-    <Value>-53.521133423</Value>
+    <Name>FOREARM-HAND CONNECT Z</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>FOREARM-HAND CONNECT DIST</Name>
+    <Value>35.243152618</Value>
 </Widget>

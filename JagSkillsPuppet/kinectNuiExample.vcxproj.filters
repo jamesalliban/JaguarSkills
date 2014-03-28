@@ -109,6 +109,9 @@
     <ClCompile Include="src\scene\body\UpperArmL.cpp">
       <Filter>scene\body</Filter>
     </ClCompile>
+    <ClCompile Include="src\scene\body\Head.cpp">
+      <Filter>scene\body</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\testApp.h" />
@@ -447,6 +450,9 @@
       <Filter>scene\body</Filter>
     </ClInclude>
     <ClInclude Include="src\scene\body\UpperArmL.h">
+      <Filter>scene\body</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\body\Head.h">
       <Filter>scene\body</Filter>
     </ClInclude>
   </ItemGroup>

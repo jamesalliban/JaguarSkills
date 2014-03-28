@@ -4,9 +4,14 @@
     <Value>1</Value>
 </Widget>
 <Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE USE OFMESH</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
     <Kind>4</Kind>
     <Name>TORSO WIDTH SCALE</Name>
-    <Value>4.121479034</Value>
+    <Value>4.103908539</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -91,7 +96,7 @@
 <Widget>
     <Kind>4</Kind>
     <Name>TORSO MESH VERT OFFSET Y</Name>
-    <Value>-9.154928207</Value>
+    <Value>-8.732394218</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>

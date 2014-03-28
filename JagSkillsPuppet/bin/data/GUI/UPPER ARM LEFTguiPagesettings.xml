@@ -1,0 +1,60 @@
+<Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE VISIBLE</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>TOGGLE USE OFMESH</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER ARM WIDTH SCALE</Name>
+    <Value>4.086338043</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER ARM HEIGHT SCALE</Name>
+    <Value>4.103908539</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER ARM DEPTH SCALE</Name>
+    <Value>4.121479034</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER ARM ROT X</Name>
+    <Value>-180.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER ARM ROT Y</Name>
+    <Value>-180.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER ARM ROT Z</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER-FOREARM CONNECT X</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER-FORE SHLDER CONNECT Y</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER-FORE SHLDER CONNECT Z</Name>
+    <Value>0.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>UPPER-FOREARM CONNECT DIST</Name>
+    <Value>-36.619716644</Value>
+</Widget>

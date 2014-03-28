@@ -24,7 +24,6 @@ void Abdomen::setup(string modelPath, ofTexture *_texture, ofTexture *_bumpMap, 
 void Abdomen::drawFaces()
 {
     BodyPart::drawFaces();
-    //BodyPart::formatConnections();
     formatConnections();
 }
 
@@ -49,14 +48,17 @@ void Abdomen::formatConnections()
     }
 	
 	
-	ofPushStyle();
-    ofSetColor(0, 0, 255, 255);
+	if (isDrawDebug)
+	{
+		ofPushStyle();
+		ofSetColor(0, 0, 255, 255);
 
 #ifdef TARGET_OSX
-    ofDrawSphere(connectingPointsAbsolute[0], 5);
+		ofDrawSphere(connectingPointsAbsolute[0], 5);
 #else
-    ofSphere(connectingPointsAbsolute[0], 5);
+		ofSphere(connectingPointsAbsolute[0], 5);
 #endif
 
-	ofPopStyle();
+		ofPopStyle();
+	}
 }
