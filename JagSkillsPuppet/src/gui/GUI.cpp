@@ -131,15 +131,6 @@ void GUI::addCameraAnglesGUI()
     gui->addSlider("CAMERA TARGET 2 POS Z", -500, 500, &app->scene.camTartetsPositions[2].z, length, dim);
     
 	gui->addSpacer(length, 1);
-	gui->addSlider("CAMERA POS 3 X", -300, 300, &app->scene.camPositions[3].x, length, dim);
-    gui->addSlider("CAMERA POS 3 Y", -300, 300, &app->scene.camPositions[3].y, length, dim);
-    gui->addSlider("CAMERA POS 3 Z", -500, 500, &app->scene.camPositions[3].z, length, dim);
-    gui->addSpacer(length, 1);
-	gui->addSlider("CAMERA TARGET 3 POS X", -300, 300, &app->scene.camTartetsPositions[3].x, length, dim);
-    gui->addSlider("CAMERA TARGET 3 POS Y", -300, 300, &app->scene.camTartetsPositions[3].y, length, dim);
-    gui->addSlider("CAMERA TARGET 3 POS Z", -500, 500, &app->scene.camTartetsPositions[3].z, length, dim);
-    
-	gui->addSpacer(length, 1);
 	gui->addSlider("CAMERA POS 4 X", -300, 300, &app->scene.camPositions[4].x, length, dim);
     gui->addSlider("CAMERA POS 4 Y", -300, 300, &app->scene.camPositions[4].y, length, dim);
     gui->addSlider("CAMERA POS 4 Z", -500, 500, &app->scene.camPositions[4].z, length, dim);
@@ -148,6 +139,16 @@ void GUI::addCameraAnglesGUI()
     gui->addSlider("CAMERA TARGET 4 POS Y", -300, 300, &app->scene.camTartetsPositions[4].y, length, dim);
     gui->addSlider("CAMERA TARGET 4 POS Z", -500, 500, &app->scene.camTartetsPositions[4].z, length, dim);
 
+
+	gui->addSpacer(length, 1);
+	gui->addSlider("CAMERA POS 3 X", -300, 300, &app->scene.camPositions[3].x, length, dim);
+    gui->addSlider("CAMERA POS 3 Y", -300, 300, &app->scene.camPositions[3].y, length, dim);
+    gui->addSlider("CAMERA POS 3 Z", -500, 500, &app->scene.camPositions[3].z, length, dim);
+    gui->addSpacer(length, 1);
+	gui->addSlider("CAMERA TARGET 3 POS X", -300, 300, &app->scene.camTartetsPositions[3].x, length, dim);
+    gui->addSlider("CAMERA TARGET 3 POS Y", -300, 300, &app->scene.camTartetsPositions[3].y, length, dim);
+    gui->addSlider("CAMERA TARGET 3 POS Z", -500, 500, &app->scene.camTartetsPositions[3].z, length, dim);
+    
     finaliseCanvas(gui);
 }
 

@@ -130,7 +130,7 @@ void Scene::draw(vector<SkeletonDataObject> skeletons)
     ofEnableLighting();
     light.enable();
     
-	printf("skeletons.size() = %i \n", skeletons.size());
+	//printf("skeletons.size() = %i \n", skeletons.size());
 	
 	if (skeletons.size() > 0)
 	{

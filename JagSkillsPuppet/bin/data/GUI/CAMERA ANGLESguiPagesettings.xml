@@ -1,37 +1,37 @@
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA POS 1 X</Name>
-    <Value>-141.549285889</Value>
+    <Value>-169.014083862</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA POS 1 Y</Name>
-    <Value>8.450710297</Value>
+    <Value>12.676048279</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA POS 1 Z</Name>
-    <Value>193.661987305</Value>
+    <Value>278.169036865</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA TARGET 1 POS X</Name>
-    <Value>0.000000000</Value>
+    <Value>33.802806854</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA TARGET 1 POS Y</Name>
-    <Value>23.239444733</Value>
+    <Value>50.704227448</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA TARGET 1 POS Z</Name>
-    <Value>102.112648010</Value>
+    <Value>66.901382446</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA POS 2 X</Name>
-    <Value>71.830986023</Value>
+    <Value>82.394348145</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -41,67 +41,37 @@
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA POS 2 Z</Name>
-    <Value>204.225357056</Value>
+    <Value>341.549285889</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA TARGET 2 POS X</Name>
-    <Value>-48.591541290</Value>
+    <Value>-2.112668753</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA TARGET 2 POS Y</Name>
-    <Value>52.816917419</Value>
+    <Value>46.478855133</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA TARGET 2 POS Z</Name>
-    <Value>70.422531128</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>CAMERA POS 3 X</Name>
-    <Value>-118.309860229</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>CAMERA POS 3 Y</Name>
-    <Value>50.704227448</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>CAMERA POS 3 Z</Name>
-    <Value>45.774639130</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>CAMERA TARGET 3 POS X</Name>
-    <Value>-25.352113724</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>CAMERA TARGET 3 POS Y</Name>
-    <Value>44.366203308</Value>
-</Widget>
-<Widget>
-    <Kind>4</Kind>
-    <Name>CAMERA TARGET 3 POS Z</Name>
-    <Value>102.112648010</Value>
+    <Value>105.633796692</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA POS 4 X</Name>
-    <Value>0.000000000</Value>
+    <Value>6.338024139</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA POS 4 Y</Name>
-    <Value>40.140830994</Value>
+    <Value>88.732406616</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
     <Name>CAMERA POS 4 Z</Name>
-    <Value>0.000000000</Value>
+    <Value>-66.901412964</Value>
 </Widget>
 <Widget>
     <Kind>4</Kind>
@@ -117,4 +87,34 @@
     <Kind>4</Kind>
     <Name>CAMERA TARGET 4 POS Z</Name>
     <Value>500.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>CAMERA POS 3 X</Name>
+    <Value>-120.422531128</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>CAMERA POS 3 Y</Name>
+    <Value>114.084503174</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>CAMERA POS 3 Z</Name>
+    <Value>-31.690151215</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>CAMERA TARGET 3 POS X</Name>
+    <Value>-4.225355148</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>CAMERA TARGET 3 POS Y</Name>
+    <Value>65.492965698</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>CAMERA TARGET 3 POS Z</Name>
+    <Value>102.112648010</Value>
 </Widget>

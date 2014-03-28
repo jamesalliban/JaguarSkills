@@ -81,7 +81,7 @@ void KinectManager::update()
 		
 	int skeletonCount = kinect.getSkeletonPoints(skelPoints);
 
-	printf("skeletonCount = %i\n", skeletonCount);
+	//printf("skeletonCount = %i\n", skeletonCount);
 
 	//if (skeletonCount == 2) skeletonCount = 1; 
 

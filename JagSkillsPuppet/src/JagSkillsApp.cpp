@@ -8,6 +8,8 @@ void JagSkillsApp::setup()
 
 	ofSetLogLevel(OF_LOG_VERBOSE);
 
+	receiver.setup(12345);
+
 	//ofEnableArbTex();
     ofDisableArbTex();
     ofSetWindowPosition(10, 10);
@@ -26,6 +28,8 @@ void JagSkillsApp::setup()
 void JagSkillsApp::update()
 {
     ofSetFullscreen(isFullscreen);
+	
+    ofSetFrameRate(frameRate);
     
     scene.setMouseCamEnabled(gui.isMouseOver());
     ofSetFrameRate(frameRate); 
@@ -36,6 +40,8 @@ void JagSkillsApp::update()
 		// get the next message
 		ofxOscMessage m;
 		receiver.getNextMessage(&m);
+
+		printf("message received - - %s \n", m.getAddress().c_str());
 
 		// check for mouse moved message
 		if (m.getAddress() == "/camera_position/1")
@@ -49,6 +55,9 @@ void JagSkillsApp::update()
 		else if (m.getAddress() == "/camera_position/5")
 			scene.setCamerangle(5);
 	}
+
+	
+
 }
 
 void JagSkillsApp::draw(vector<SkeletonDataObject> skeletons)

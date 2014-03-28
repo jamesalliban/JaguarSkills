@@ -41,7 +41,7 @@ void testApp::draw()
     ofBackground(40);
     kinectManager.draw();
     
-        jagSkillsApp.draw(kinectManager.smoothSkeletons);
+    jagSkillsApp.draw(kinectManager.smoothSkeletons);
 }
 
 void testApp::keyPressed(int key)
