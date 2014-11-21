@@ -317,5 +317,5 @@ void Scene::setCameraProps()
 
 void Scene::setCamerangle(int camIndex)
 {
-
+	currentCameraIndex =camIndex;
 }

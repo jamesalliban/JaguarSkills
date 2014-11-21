@@ -59,15 +59,25 @@ void testApp::keyPressed(int key)
     else if (key == 'r')
         jagSkillsApp.scene.loadShader();
 	else if (key == '1')
+	{
 		jagSkillsApp.scene.currentCameraIndex = 0;
+	}
 	else if (key == '2')
+	{
 		jagSkillsApp.scene.currentCameraIndex = 1;
+	}
 	else if (key == '3')
+	{
 		jagSkillsApp.scene.currentCameraIndex = 2;
+	}
 	else if (key == '4')
+	{
 		jagSkillsApp.scene.currentCameraIndex = 3;
+	}
 	else if (key == '5')
+	{
 		jagSkillsApp.scene.currentCameraIndex = 4;
+	}
 }
 
 void testApp::keyReleased(int key){
