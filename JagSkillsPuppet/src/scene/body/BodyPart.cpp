@@ -78,9 +78,6 @@ void BodyPart::update(ofVec3f _skelJointPos, ofVec3f _skelJointTarget)
     // get quaternion to rotate model
     qt.makeRotate(ofVec3f(1, 0, 0), direction);
     qt.getRotate(qangle, qaxis);
-
-
-	
 }
 
 

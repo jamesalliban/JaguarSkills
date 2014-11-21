@@ -38,7 +38,9 @@ void Scene::setup()
 
     torso.setup("models/chest_separate.obj", &chestImg.getTextureReference(), &chestBumpImg.getTextureReference(), &shader);
     //head.setup("models/head.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
-    head.setup("models/headweyes.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
+    //head.setup("models/headweyes.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
+    head.setup("models/headweyes_longcape.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
+
     //head.setup("models/animheadtest.dae", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
 
     upperArmL.setup("models/Rupperarm.obj", &headarmsImg.getTextureReference(), &headarmsBumpImg.getTextureReference(), &shader);
